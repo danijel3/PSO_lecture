@@ -11860,11 +11860,12 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Warunki-zalicze&#324;">Warunki zalicze&#324;<a class="anchor-link" href="#Warunki-zalicze&#324;">&#182;</a></h1><h2 id="&#262;wiczenia">&#262;wiczenia<a class="anchor-link" href="#&#262;wiczenia">&#182;</a></h2><ul>
-<li>Każde ćwiczednie jest oceniane od 2-5</li>
+<li>Każde ćwiczenie jest oceniane od 2-5</li>
 <li>Ocena końcowa to średnia wszystkich ćwiczeń</li>
 <li>Nieoddane lub niezaliczone ćwiczenie to ocena 0</li>
 <li>Ćwiczenia oddajemy najpóźniej na następnej lekcji</li>
 <li>W uzasadnionych przypadkach można poprosić o przedłużenie terminu oddania</li>
+<li>Dozwolone maksymalne 2 nieobecności na ćwiczeniach bez uzasadnienia (1 na stud. zaocznych)</li>
 </ul>
 <h2 id="Egzamin">Egzamin<a class="anchor-link" href="#Egzamin">&#182;</a></h2><ul>
 <li>Egzamin dotyczy materiału z wykładów</li>
@@ -11941,7 +11942,22 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="sound_signal.png" alt=""></p>
+<h1 id="Przetwarzanie-sygna&#322;&#243;w">Przetwarzanie sygna&#322;&#243;w<a class="anchor-link" href="#Przetwarzanie-sygna&#322;&#243;w">&#182;</a></h1><ul>
+<li>Synteza lub generowanie sygnałów</li>
+<li>Analiza lub parametryzacja sygnałów</li>
+<li>Modyfikacja - przetwarzanie sygnałów</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Transmisja-sygna&#322;u">Transmisja sygna&#322;u<a class="anchor-link" href="#Transmisja-sygna&#322;u">&#182;</a></h1><p><img src="images/Shannon-and-Weaver-1948.png" alt="">
+(Shannon i Weaver, 1948)</p>
 
 </div>
 </div>
@@ -11977,8 +11993,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Transmisja-sygna&#322;u">Transmisja sygna&#322;u<a class="anchor-link" href="#Transmisja-sygna&#322;u">&#182;</a></h1><p><img src="Shannon-and-Weaver-1948.png" alt="">
-(Shannon i Weaver, 1948)</p>
+<p><img src="images/sound_signal.png" alt=""></p>
 
 </div>
 </div>
@@ -11988,7 +12003,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="Sygnały.svg" alt="">
+<p><img src="images/Sygnały.svg" alt="">
 (T. Zieliński)</p>
 
 </div>
@@ -12005,7 +12020,7 @@ a.anchor-link {
 <li>dla której, dla wszystkich wartości czasu $t \in \mathbb{R}$ i dla dowolnej liczby $k \in \mathbb{Z}$ zachodzi zależność:</li>
 </ul>
 <p>$x(t)=x(t+kT)$</p>
-<p><img src="periodic.png" alt=""></p>
+<p><img src="images/periodic.png" alt=""></p>
 
 </div>
 </div>
@@ -12016,18 +12031,17 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Przyk&#322;ady-sygna&#322;&#243;w-deterministycznych">Przyk&#322;ady sygna&#322;&#243;w deterministycznych<a class="anchor-link" href="#Przyk&#322;ady-sygna&#322;&#243;w-deterministycznych">&#182;</a></h1><ul>
-<li>Impuls prostokątny
-\begin{equation}
-x(t)=\left{
-\begin{array}{l l}
-0 &amp; \text{dla $|t|>\frac{1}{2}$} \
-\frac{1}{2} &amp; \text{dla $|t|=\frac{1}{2}$} \
-1 &amp; \text{dla $|t|<\frac{1}{2}$}
-\end{array}
-\right.\
-\end{equation}
-<img src="impuls.png" alt=""></li>
+<li>Impuls prostokątny</li>
 </ul>
+\begin{equation}
+x(t)=\left\{
+\begin{array}{l l}
+ 0 & \text{dla $|t|>\frac{1}{2}$} \\
+ \frac{1}{2} & \text{dla $|t|=\frac{1}{2}$} \\
+ 1 & \text{dla $|t|<\frac{1}{2}$}
+\end{array}
+\right.
+\end{equation}<p><img src="images/impuls.png" alt=""></p>
 
 </div>
 </div>
@@ -12038,18 +12052,17 @@ x(t)=\left{
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Przyk&#322;ady-sygna&#322;&#243;w-deterministycznych">Przyk&#322;ady sygna&#322;&#243;w deterministycznych<a class="anchor-link" href="#Przyk&#322;ady-sygna&#322;&#243;w-deterministycznych">&#182;</a></h1><ul>
-<li>Skok jednostkowy
-\begin{equation}
-x(t)=\left{
-\begin{array}{l l}
-1 &amp; \text{dla $t>0$} \
-\frac{1}{2} &amp; \text{dla $t=0$} \
-0 &amp; \text{dla $t<0$}
-\end{array}
-\right.\
-\end{equation}
-<img src="skok.png" alt=""></li>
+<li>Skok jednostkowy</li>
 </ul>
+\begin{equation}
+x(t)=\left\{
+\begin{array}{l l}
+1 & \text{dla $t>0$} \\
+\frac{1}{2} & \text{dla $t=0$} \\
+0 & \text{dla $t<0$}
+\end{array}
+\right.
+\end{equation}<p><img src="images/skok.png" alt=""></p>
 
 </div>
 </div>
@@ -12064,7 +12077,7 @@ x(t)=\left{
 \begin{equation}
 x(t)=A\sin(\omega_0t+\phi)
 \end{equation}
-<img src="sinus.png" alt=""></li>
+<img src="images/sinus.png" alt=""></li>
 </ul>
 
 </div>
@@ -12080,30 +12093,7 @@ x(t)=A\sin(\omega_0t+\phi)
 \begin{equation}
 x(t)=\frac{\sin(\omega_0t)}{\omega_0t}
 \end{equation}
-<img src="sinc.png" alt=""></li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Reprezentacja-sygna&#322;u">Reprezentacja sygna&#322;u<a class="anchor-link" href="#Reprezentacja-sygna&#322;u">&#182;</a></h1><ul>
-<li>sygnał najczęściej zapisujemy jako funkcję wartości rzeczywistych w czasie: $f(x)$</li>
-<li>sygnał może jednak być reprezentowany jako funkcja liczb zespolonych<ul>
-<li>przykładem sygnału zespolonego to przebieg wykładniczy:</li>
-</ul>
-</li>
-</ul>
-<p>$z(t)=e^{j\omega t}=\cos(\omega t)+j\sin(\omega t)$</p>
-<ul>
-<li>sygnały można też przeskształcać do innych dziedzin<ul>
-<li>przykładowo za pomocą transformaty Fouriera do dziedziny częstotliowści</li>
-</ul>
-</li>
+<img src="images/sinc.png" alt=""></li>
 </ul>
 
 </div>
@@ -12134,7 +12124,7 @@ x(t)=\frac{\sin(\omega_0t)}{\omega_0t}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="losowe.png" alt="">
+<p><img src="images/losowe.png" alt="">
 (T. Zielinski)</p>
 
 </div>
@@ -12145,10 +12135,20 @@ x(t)=\frac{\sin(\omega_0t)}{\omega_0t}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Przetwarzanie-sygna&#322;&#243;w">Przetwarzanie sygna&#322;&#243;w<a class="anchor-link" href="#Przetwarzanie-sygna&#322;&#243;w">&#182;</a></h1><ul>
-<li>Synteza lub generowanie sygnałów</li>
-<li>Analiza lub parametryzacja sygnałów</li>
-<li>Modyfikacja - przetwarzanie sygnałów</li>
+<h1 id="Reprezentacja-sygna&#322;u">Reprezentacja sygna&#322;u<a class="anchor-link" href="#Reprezentacja-sygna&#322;u">&#182;</a></h1><ul>
+<li>sygnał najczęściej zapisujemy jako funkcję wartości rzeczywistych w czasie: $f(x)$</li>
+<li>sygnał może jednak być reprezentowany jako funkcja liczb zespolonych<ul>
+<li>przykładem sygnału zespolonego to przebieg wykładniczy:</li>
+</ul>
+</li>
+</ul>
+\begin{equation}
+z(t)=e^{j\omega t}=\cos(\omega t)+j\sin(\omega t)
+\end{equation}<ul>
+<li>sygnały można też przeskształcać do innych dziedzin<ul>
+<li>przykładowo za pomocą transformaty Fouriera do dziedziny częstotliowści</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -12183,7 +12183,7 @@ x(t)=\frac{\sin(\omega_0t)}{\omega_0t}
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Zalety-cyfrowego-przetwarzania-danych">Zalety cyfrowego przetwarzania danych<a class="anchor-link" href="#Zalety-cyfrowego-przetwarzania-danych">&#182;</a></h1><ul>
-<li>programowalność, elsatyczność</li>
+<li>programowalność, elastyczność</li>
 <li>stabilność, odporność na zakłócenia, starty</li>
 <li>powtarzalność</li>
 <li>kompresja danych</li>
@@ -12202,12 +12202,14 @@ x(t)=\frac{\sin(\omega_0t)}{\omega_0t}
 <h1 id="Transformaty">Transformaty<a class="anchor-link" href="#Transformaty">&#182;</a></h1><ul>
 <li>sygnał jest reprezentowany za pomocą funkcji operującej na liczbach, np:</li>
 </ul>
-<p>$f(t) : \mathbb{R} \to \mathbb{R}$</p>
-<ul>
+\begin{equation}
+f(t) : \mathbb{R} \to \mathbb{R}
+\end{equation}<ul>
 <li>transformata to działanie matematyczne (podobne do funkcji) ale operujące na funkcjach:</li>
 </ul>
-<p>$F(f) : f(t) \to g(\xi)$</p>
-<ul>
+\begin{equation}
+F(f) : f(t) \to g(\xi)
+\end{equation}<ul>
 <li>pozwalają "inaczej spojrzeć" na zawartość sygnału</li>
 <li>znacznie upraszczają niektóre działania matematyczne</li>
 </ul>
