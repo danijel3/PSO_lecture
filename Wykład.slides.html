@@ -36,7 +36,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <!-- Loading the mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -58,7 +58,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     <!-- End of mathjax configuration -->
 
 <!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -67,8 +67,8 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 *
 */
 /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1163,7 +1163,6 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2592,7 +2591,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3083,7 +3081,6 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8814,6 +8811,9 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
+[dir="rtl"] #ipython_notebook {
+  float: right !important;
+}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -9016,8 +9016,14 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
+[dir="rtl"] #tabs li {
+  float: right;
+}
 ul#tabs {
   margin-bottom: 4px;
+}
+[dir="rtl"] ul#tabs {
+  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -9040,6 +9046,16 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
+}
+[dir="rtl"] .list_toolbar .tree-buttons {
+  float: left !important;
+}
+[dir="rtl"] .list_toolbar .pull-right {
+  padding-top: 1px;
+  float: left !important;
+}
+[dir="rtl"] .list_toolbar .pull-left {
+  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9176,6 +9192,9 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
+[dir="rtl"] #tree-selector a {
+  float: right;
+}
 #button-select-all {
   min-width: 50px;
 }
@@ -9265,6 +9284,9 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
+[dir="rtl"] #new-menu {
+  text-align: right;
+}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9309,6 +9331,9 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
+}
+[dir="rtl"] #running .col-sm-8 {
+  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9605,6 +9630,7 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
+  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9625,11 +9651,6 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
-}
-@-moz-document url-prefix() {
-  div.inner_cell {
-    overflow-x: hidden;
-  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11300,7 +11321,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 20ex;
+  width: 21ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11612,6 +11633,7 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
+  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11625,6 +11647,9 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
+}
+.terminal-app .terminal .xterm-rows {
+  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11685,8 +11710,10 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11697,9 +11724,11 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11747,7 +11776,6 @@ ul.typeahead-list > li > a {
 /* Overrides of notebook CSS for static HTML export */
 .reveal {
   font-size: 160%;
-  overflow-y: scroll;
 }
 .reveal pre {
   width: inherit;
@@ -11777,6 +11805,41 @@ ul.typeahead-list > li > a {
 }
 .reveal .progress {
   position: static;
+}
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #727272;
+}
+.reveal .controls .navigate-left.enabled:hover,
+.reveal .controls .navigate-left.enabled.enabled:hover {
+  border-right-color: #dfdfdf;
+}
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #727272;
+}
+.reveal .controls .navigate-right.enabled:hover,
+.reveal .controls .navigate-right.enabled.enabled:hover {
+  border-left-color: #dfdfdf;
+}
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #727272;
+}
+.reveal .controls .navigate-up.enabled:hover,
+.reveal .controls .navigate-up.enabled.enabled:hover {
+  border-bottom-color: #dfdfdf;
+}
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #727272;
+}
+.reveal .controls .navigate-down.enabled:hover,
+.reveal .controls .navigate-down.enabled.enabled:hover {
+  border-top-color: #dfdfdf;
+}
+.reveal .progress span {
+  background: #727272;
 }
 div.input_area {
   padding: 0.06em;
@@ -11811,6 +11874,19 @@ a.anchor-link {
 .rendered_html p {
   text-align: inherit;
 }
+::-webkit-scrollbar
+{
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar *
+{
+  background:transparent;
+}
+::-webkit-scrollbar-thumb
+{
+  background: #727272 !important;
+}
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
@@ -11825,8 +11901,7 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11834,8 +11909,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11854,8 +11928,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11875,8 +11948,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11901,8 +11973,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11917,8 +11988,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11937,8 +12007,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11951,8 +12020,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11962,8 +12030,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11988,8 +12055,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11998,8 +12064,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12009,8 +12074,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12025,50 +12089,49 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Przyk&#322;ady-sygna&#322;&#243;w-deterministycznych">Przyk&#322;ady sygna&#322;&#243;w deterministycznych<a class="anchor-link" href="#Przyk&#322;ady-sygna&#322;&#243;w-deterministycznych">&#182;</a></h1><ul>
 <li>Impuls prostokątny</li>
 </ul>
-\begin{equation}
+<p>\begin{equation}
 x(t)=\left\{
 \begin{array}{l l}
- 0 & \text{dla $|t|>\frac{1}{2}$} \\
- \frac{1}{2} & \text{dla $|t|=\frac{1}{2}$} \\
- 1 & \text{dla $|t|<\frac{1}{2}$}
+ 0 &amp; \text{dla $|t|&gt;\frac{1}{2}$} \\
+ \frac{1}{2} &amp; \text{dla $|t|=\frac{1}{2}$} \\
+ 1 &amp; \text{dla $|t|&lt;\frac{1}{2}$}
 \end{array}
 \right.
-\end{equation}<p><img src="images/impuls.png" alt=""></p>
+\end{equation}</p>
+<p><img src="images/impuls.png?1" alt=""></p>
 
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Przyk&#322;ady-sygna&#322;&#243;w-deterministycznych">Przyk&#322;ady sygna&#322;&#243;w deterministycznych<a class="anchor-link" href="#Przyk&#322;ady-sygna&#322;&#243;w-deterministycznych">&#182;</a></h1><ul>
 <li>Skok jednostkowy</li>
 </ul>
-\begin{equation}
+<p>\begin{equation}
 x(t)=\left\{
 \begin{array}{l l}
-1 & \text{dla $t>0$} \\
-\frac{1}{2} & \text{dla $t=0$} \\
-0 & \text{dla $t<0$}
+1 &amp; \text{dla $t&gt;0$} \\
+\frac{1}{2} &amp; \text{dla $t=0$} \\
+0 &amp; \text{dla $t&lt;0$}
 \end{array}
 \right.
-\end{equation}<p><img src="images/skok.png" alt=""></p>
+\end{equation}</p>
+<p><img src="images/skok.png" alt=""></p>
 
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12083,8 +12146,7 @@ x(t)=A\sin(\omega_0t+\phi)
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12099,8 +12161,7 @@ x(t)=\frac{\sin(\omega_0t)}{\omega_0t}
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12119,8 +12180,7 @@ x(t)=\frac{\sin(\omega_0t)}{\omega_0t}
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12130,8 +12190,7 @@ x(t)=\frac{\sin(\omega_0t)}{\omega_0t}
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12142,9 +12201,10 @@ x(t)=\frac{\sin(\omega_0t)}{\omega_0t}
 </ul>
 </li>
 </ul>
-\begin{equation}
+<p>\begin{equation}
 z(t)=e^{j\omega t}=\cos(\omega t)+j\sin(\omega t)
-\end{equation}<ul>
+\end{equation}</p>
+<ul>
 <li>sygnały można też przeskształcać do innych dziedzin<ul>
 <li>przykładowo za pomocą transformaty Fouriera do dziedziny częstotliowści</li>
 </ul>
@@ -12154,8 +12214,7 @@ z(t)=e^{j\omega t}=\cos(\omega t)+j\sin(\omega t)
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12177,8 +12236,7 @@ z(t)=e^{j\omega t}=\cos(\omega t)+j\sin(\omega t)
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12194,22 +12252,23 @@ z(t)=e^{j\omega t}=\cos(\omega t)+j\sin(\omega t)
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Transformaty">Transformaty<a class="anchor-link" href="#Transformaty">&#182;</a></h1><ul>
 <li>sygnał jest reprezentowany za pomocą funkcji operującej na liczbach, np:</li>
 </ul>
-\begin{equation}
+<p>\begin{equation}
 f(t) : \mathbb{R} \to \mathbb{R}
-\end{equation}<ul>
+\end{equation}</p>
+<ul>
 <li>transformata to działanie matematyczne (podobne do funkcji) ale operujące na funkcjach:</li>
 </ul>
-\begin{equation}
+<p>\begin{equation}
 F(f) : f(t) \to g(\xi)
-\end{equation}<ul>
+\end{equation}</p>
+<ul>
 <li>pozwalają "inaczej spojrzeć" na zawartość sygnału</li>
 <li>znacznie upraszczają niektóre działania matematyczne</li>
 </ul>
@@ -12217,8 +12276,7 @@ F(f) : f(t) \to g(\xi)
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12242,6 +12300,574 @@ F(f) : f(t) \to g(\xi)
 </li>
 <li>Podsumowanie i powtórzenie materiału</li>
 </ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sygna&#322;y-i-ich-parametry">Sygna&#322;y i ich parametry<a class="anchor-link" href="#Sygna&#322;y-i-ich-parametry">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Ci&#261;g&#322;y">Ci&#261;g&#322;y<a class="anchor-link" href="#Ci&#261;g&#322;y">&#182;</a></h1><p><img src="images/analog.png?1" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Ci&#261;g&#322;y,-dyskretnego-czasu">Ci&#261;g&#322;y, dyskretnego czasu<a class="anchor-link" href="#Ci&#261;g&#322;y,-dyskretnego-czasu">&#182;</a></h1><p><img src="images/discrete_time.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Dyskretny-ci&#261;g&#322;ego-czasu">Dyskretny ci&#261;g&#322;ego czasu<a class="anchor-link" href="#Dyskretny-ci&#261;g&#322;ego-czasu">&#182;</a></h1><p><img src="images/discrete_value.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Cyfrowy">Cyfrowy<a class="anchor-link" href="#Cyfrowy">&#182;</a></h1><p><img src="images/digital.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Okresowy">Okresowy<a class="anchor-link" href="#Okresowy">&#182;</a></h1><p>\begin{equation}
+\forall t \in \mathbb{R},\, \forall k \in \mathbb{Z},\, \exists T \in \mathbb{R} \\
+y(t)=y(t+kT)
+\end{equation}</p>
+<p><img src="images/periodic.png?1" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Nieokresowy">Nieokresowy<a class="anchor-link" href="#Nieokresowy">&#182;</a></h1><p><img src="images/aperiodic.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Deterministyczny">Deterministyczny<a class="anchor-link" href="#Deterministyczny">&#182;</a></h1><p><img src="images/deterministic.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Losowy">Losowy<a class="anchor-link" href="#Losowy">&#182;</a></h1><p><img src="images/random.png?1" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sko&#324;czony">Sko&#324;czony<a class="anchor-link" href="#Sko&#324;czony">&#182;</a></h1><p><img src="images/finite.png?1" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Niesko&#324;czony">Niesko&#324;czony<a class="anchor-link" href="#Niesko&#324;czony">&#182;</a></h1><h2 id="Nieprzyczynowy">Nieprzyczynowy<a class="anchor-link" href="#Nieprzyczynowy">&#182;</a></h2><p><img src="images/infinite.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Przyczynowy">Przyczynowy<a class="anchor-link" href="#Przyczynowy">&#182;</a></h1><p><img src="images/causal.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Anty-przyczynowy">Anty-przyczynowy<a class="anchor-link" href="#Anty-przyczynowy">&#182;</a></h1><p><img src="images/anticausal.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Symetryczny-parzysty">Symetryczny parzysty<a class="anchor-link" href="#Symetryczny-parzysty">&#182;</a></h1><p>\begin{equation}
+f(t)=f(-t)
+\end{equation}</p>
+<p><img src="images/even.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Symetryczny-nieparzysty">Symetryczny nieparzysty<a class="anchor-link" href="#Symetryczny-nieparzysty">&#182;</a></h1><p>\begin{equation}
+f(t)=-f(-t)
+\end{equation}</p>
+<p><img src="images/odd.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Dekompozycja">Dekompozycja<a class="anchor-link" href="#Dekompozycja">&#182;</a></h1><p>\begin{equation}
+f_p(t)=f(t)+f(-t) \\
+f_n(t)=f(t)-f(-t) \\
+f(t)=\frac{1}{2}(f(t)+f(-t))+\frac{1}{2}(f(t)-f(-t))
+\end{equation}</p>
+<p><img src="images/evenplusodd.png" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Definicje-poj&#281;&#263;">Definicje poj&#281;&#263;<a class="anchor-link" href="#Definicje-poj&#281;&#263;">&#182;</a></h1><h2 id="Amplituda">Amplituda<a class="anchor-link" href="#Amplituda">&#182;</a></h2><ul>
+<li>miara zmiany wartości sygnału:<ul>
+<li>peak (<em>1</em>)</li>
+<li>peak-to-peak (<em>2</em>)</li>
+<li>RMS (<em>3</em>) $\sqrt{\frac{1}{T}\int_{0}^{T} f(t)^2 dt}$</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Sine_voltage.svg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Faza">Faza<a class="anchor-link" href="#Faza">&#182;</a></h2><ul>
+<li>przesunięcie sygnału w przestrzeni parametrów (np. czasu)</li>
+<li>w przypadku sygnałów okresowych zdefiniowana jako kąt<ul>
+<li>gdzie $360^{\circ} = 2 \pi = T$</li>
+</ul>
+</li>
+</ul>
+<h2 id="Cz&#281;stotliwo&#347;&#263;">Cz&#281;stotliwo&#347;&#263;<a class="anchor-link" href="#Cz&#281;stotliwo&#347;&#263;">&#182;</a></h2><ul>
+<li>ilość występowania pewnego zjawiska (np. okresu) w jednostce czasu</li>
+<li>Hz -- ilość okresów na sekundę</li>
+</ul>
+<h2 id="D&#322;ugo&#347;&#263;-fali">D&#322;ugo&#347;&#263; fali<a class="anchor-link" href="#D&#322;ugo&#347;&#263;-fali">&#182;</a></h2><ul>
+<li>długość okresu sygnału w danym medium</li>
+<li>odwrotność częstotliwości: $\lambda = \frac{v}{f}$</li>
+<li>dla dźwięku: $f=1000Hz \rightarrow v \approx 343 m/s \rightarrow \lambda \approx 34 cm$</li>
+</ul>
+<h2 id="Pr&#243;bka">Pr&#243;bka<a class="anchor-link" href="#Pr&#243;bka">&#182;</a></h2><ul>
+<li>w sygnale dyskretnym, wartość amplitudy sygnału w jednej chwili czasowej</li>
+<li>częstotliwość próbkowania -- ilość próbek wyliczonych na 1 sekundę sygnału</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sinusoidalny">Sinusoidalny<a class="anchor-link" href="#Sinusoidalny">&#182;</a></h1><p>\begin{equation}
+f(t)=A*\sin(2\pi f_0 t+\phi)
+\end{equation}
+<img src="images/sine.png" alt=""></p>
+<ul>
+<li>$A$ - amplituda</li>
+<li>$f_0$ - częstotliwość ($1/T$)</li>
+<li>$\phi$ - faza</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sinusoidalny">Sinusoidalny<a class="anchor-link" href="#Sinusoidalny">&#182;</a></h1><p>\begin{equation}
+f(n)=A*\sin(2\pi f_0 n / f_s +\phi)
+\end{equation}
+<img src="images/sine_disc.png" alt=""></p>
+<ul>
+<li>$n$ - numer próbki ($\in \mathbb{N}$)</li>
+<li>$f_s$ - częstotliwość próbkowania</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Impuls-prostok&#261;tny">Impuls prostok&#261;tny<a class="anchor-link" href="#Impuls-prostok&#261;tny">&#182;</a></h1><p>\begin{equation}
+x(t)=\Pi(t)=\left\{
+\begin{array}{l l}
+ 0 &amp; \text{dla $|t|&gt;\frac{1}{2}$} \\
+ \frac{1}{2} &amp; \text{dla $|t|=\frac{1}{2}$} \\
+ 1 &amp; \text{dla $|t|&lt;\frac{1}{2}$}
+\end{array}
+\right.
+\end{equation}</p>
+<p><img src="images/square_pulse.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Impuls-tr&#243;jk&#261;tny">Impuls tr&#243;jk&#261;tny<a class="anchor-link" href="#Impuls-tr&#243;jk&#261;tny">&#182;</a></h1><p>\begin{equation}
+x(t)=\Lambda(t)=\left\{
+\begin{array}{l l}
+ 0 &amp; \text{dla $|t|&gt;\frac{1}{2}$} \\
+ 1-|t| &amp; \text{dla $|t|\leq\frac{1}{2}$} \\
+\end{array}
+\right.
+\end{equation}</p>
+<p><img src="images/triangle_pulse.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Impuls-kosinusoidalny">Impuls kosinusoidalny<a class="anchor-link" href="#Impuls-kosinusoidalny">&#182;</a></h1><p>\begin{equation}
+x(t)=cos(\omega_0 t) \cdot \Pi\left(\frac{t}{T/2}\right) \\
+\omega_0 = 2\pi f_0,\,f_0 = 1/T
+\end{equation}</p>
+<p><img src="images/cosine_pulse.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Delta-diraca">Delta diraca<a class="anchor-link" href="#Delta-diraca">&#182;</a></h1><p>\begin{equation}
+f(t)=\delta(t)=\left\{
+\begin{array}{l l}
+0 &amp; \text{dla $t&lt;0$} \\
+\infty &amp; \text{dla $t=0$} \\
+0 &amp; \text{dla $t&gt;0$}
+\end{array}
+\right. 
+\end{equation}</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dirac_distribution_PDF.svg" style="width:500px"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Delta-diraca">Delta diraca<a class="anchor-link" href="#Delta-diraca">&#182;</a></h1><p>\begin{equation}
+\lim_{\epsilon\rightarrow0}\int_{-\epsilon}^{\epsilon}\delta(t)dt=1
+\end{equation}</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Dirac_function_approximation.gif" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Delta-kroneckera">Delta kroneckera<a class="anchor-link" href="#Delta-kroneckera">&#182;</a></h1><p>\begin{equation}
+f(n)=\left\{
+\begin{array}{l l}
+1 &amp; \text{dla $n=0$} \\
+0 &amp; \text{dla $n\neq0$}
+\end{array}
+\right. 
+\end{equation}</p>
+<p><img src="images/kronecker.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Wyk&#322;adniczy-malej&#261;cy">Wyk&#322;adniczy malej&#261;cy<a class="anchor-link" href="#Wyk&#322;adniczy-malej&#261;cy">&#182;</a></h1><p>\begin{equation}
+f(t)=\left\{
+\begin{array}{l l}
+Ae^{-\alpha t} &amp; \text{dla $t\geq 0$} \\
+0 &amp; \text{dla $t&lt;0$}
+\end{array}
+\right. \\
+\alpha &gt;0
+\end{equation}</p>
+<p><img src="images/exp_dec.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sinusoidalny-malej&#261;cy-wyk&#322;adniczo">Sinusoidalny malej&#261;cy wyk&#322;adniczo<a class="anchor-link" href="#Sinusoidalny-malej&#261;cy-wyk&#322;adniczo">&#182;</a></h1><p>\begin{equation}
+f(t)=\left\{
+\begin{array}{l l}
+Ae^{-\alpha t} \sin(\omega_0 t) &amp; \text{dla $t\geq 0$} \\
+0 &amp; \text{dla $t&lt;0$}
+\end{array}
+\right. 
+\end{equation}</p>
+<p><img src="images/exp_sin.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sinc">Sinc<a class="anchor-link" href="#Sinc">&#182;</a></h1><p>\begin{equation}
+f(t)=\left\{
+\begin{array}{l l}
+\sin(\omega_0 t)/(\omega_0 t) &amp; \text{dla $t\neq 0$} \\
+1 &amp; \text{dla $t=0$}
+\end{array}
+\right. 
+\end{equation}</p>
+<p><img src="images/sinc.png?1" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Gaussowski">Gaussowski<a class="anchor-link" href="#Gaussowski">&#182;</a></h1><p>\begin{equation}
+f(t)=e^{-\pi t^2}
+\end{equation}</p>
+<p><img src="images/gaussian.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Skok-jednostkowy">Skok jednostkowy<a class="anchor-link" href="#Skok-jednostkowy">&#182;</a></h1><p>\begin{equation}
+f(t)=\left\{
+\begin{array}{l l}
+1 &amp; \text{dla $t\geq 0$} \\
+0 &amp; \text{dla $t&lt;0$}
+\end{array}
+\right. 
+\end{equation}</p>
+<p><img src="images/step.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Wyk&#322;adniczy-narastaj&#261;cy">Wyk&#322;adniczy narastaj&#261;cy<a class="anchor-link" href="#Wyk&#322;adniczy-narastaj&#261;cy">&#182;</a></h1><p>\begin{equation}
+f(t)=\left\{
+\begin{array}{l l}
+(1-e^{-\alpha t}) &amp; \text{dla $t\geq 0$} \\
+0 &amp; \text{dla $t&lt;0$}
+\end{array}
+\right. \\
+\alpha&gt;0
+\end{equation}</p>
+<p><img src="images/exp_inc.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Znak-(signum)">Znak (signum)<a class="anchor-link" href="#Znak-(signum)">&#182;</a></h1><p>\begin{equation}
+f(t)=\left\{
+\begin{array}{l l}
+1 &amp; \text{dla $t&gt;0$} \\
+0 &amp; \text{dla $t=0$} \\
+-1 &amp; \text{dla $t&lt;0$}
+\end{array}
+\right. 
+\end{equation}</p>
+<p><img src="images/sign.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Ca&#322;ka-z-sinc">Ca&#322;ka z sinc<a class="anchor-link" href="#Ca&#322;ka-z-sinc">&#182;</a></h1><p><img src="images/sinc_int.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Fala-prosrok&#261;tna-(PWM)">Fala prosrok&#261;tna (PWM)<a class="anchor-link" href="#Fala-prosrok&#261;tna-(PWM)">&#182;</a></h1><p><img src="images/pwm.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Fala-tr&#243;jk&#261;tna">Fala tr&#243;jk&#261;tna<a class="anchor-link" href="#Fala-tr&#243;jk&#261;tna">&#182;</a></h1><p><img src="images/pwm_tri.png" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Parametry">Parametry<a class="anchor-link" href="#Parametry">&#182;</a></h1><p>\begin{equation}
+\mu_n = \int_{-\infty}^{\infty} (x-c)^n f(x) dx
+\end{equation}</p>
+<ul>
+<li>momenty<ul>
+<li>średnia</li>
+<li>wariancja</li>
+<li>skośność</li>
+<li>kurtoza</li>
+<li>(hiperskośność, hiperkurtoza)</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Sko&#347;no&#347;&#263;">Sko&#347;no&#347;&#263;<a class="anchor-link" href="#Sko&#347;no&#347;&#263;">&#182;</a></h2><p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Negative_and_positive_skew_diagrams_%28English%29.svg" alt=""></p>
+<h2 id="Kurtoza">Kurtoza<a class="anchor-link" href="#Kurtoza">&#182;</a></h2><p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Standard_symmetric_pdfs.png" style="width:500px"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Parametry">Parametry<a class="anchor-link" href="#Parametry">&#182;</a></h1><h2 id="Energia">Energia<a class="anchor-link" href="#Energia">&#182;</a></h2><p>\begin{equation}
+E = \int_{-\infty}^{\infty} f(t) ^2 dt
+\end{equation}</p>
+<h2 id="Moc">Moc<a class="anchor-link" href="#Moc">&#182;</a></h2><p>\begin{equation}
+P = \lim_{T\rightarrow\infty}\frac{E}{T}
+\end{equation}</p>
+<h2 id="Skuteczna-amplituda-(RMS)">Skuteczna amplituda (RMS)<a class="anchor-link" href="#Skuteczna-amplituda-(RMS)">&#182;</a></h2><p>\begin{equation}
+RMS(T) = \sqrt{P_T}
+\end{equation}</p>
+<h2 id="decybel-(dB)">decybel (dB)<a class="anchor-link" href="#decybel-(dB)">&#182;</a></h2><ul>
+<li>Prawo Webera-Fechnera</li>
+</ul>
+<p>\begin{equation}
+P_{dB} = 10 \log_{10} \frac{P}{P_0} = 20 \log_{10} \frac{A}{A_0}
+\end{equation}</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Operacje">Operacje<a class="anchor-link" href="#Operacje">&#182;</a></h1><ul>
+<li>przesunięcie w czasie</li>
+<li>przesunięcie w amplitudzie</li>
+<li>zmiana amplitudy</li>
+<li>skalowanie czasowe</li>
+</ul>
+<p>\begin{equation}
+g(t)=A*f(a*t-b)+B
+\end{equation}</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Modulacja">Modulacja<a class="anchor-link" href="#Modulacja">&#182;</a></h1><ul>
+<li>amplitudowa (AM)</li>
+<li>częstotliwościowa (FM)</li>
+<li><p>fazowa</p>
+</li>
+<li><p>sygnał modulowany, tzw. fala nośna (carrier signal) - 504 - 1600 kHz (AM), lub 88-108 MHz (FM)</p>
+</li>
+<li>sygnał modulujący</li>
+<li>szerokość pasma 10 kHz (AM) i 200 kHz (FM)</li>
+</ul>
+<p>\begin{equation}
+y(t) = (1 + M \cdot y_t ) \cdot y_c \\
+y(t) = sin(2 \cdot \pi \cdot f_c \cdot t + M \cdot y_t)
+\end{equation}</p>
 
 </div>
 </div>
@@ -12270,8 +12896,7 @@ require(
             progress: true,
             history: true,
 
-            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+            transition: "slide",
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
@@ -12291,13 +12916,25 @@ require(
 
         Reveal.addEventListener('slidechanged', update);
 
-        var update_scroll = function(event){
-          $(".reveal").scrollTop(0);
-        };
+        function setScrollingSlide() {
+            var scroll = false
+            if (scroll === true) {
+              var h = $('.reveal').height() * 0.95;
+              $('section.present').find('section')
+                .filter(function() {
+                  return $(this).height() > h;
+                })
+                .css('height', 'calc(95vh)')
+                .css('overflow-y', 'scroll')
+                .css('margin-top', '20px');
+            }
+        }
 
-        Reveal.addEventListener('slidechanged', update_scroll);
+        // check and set the scrolling slide every time the slide change
+        Reveal.addEventListener('slidechanged', setScrollingSlide);
 
     }
+
 );
 </script>
 
