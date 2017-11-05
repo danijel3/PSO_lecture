@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>4_Fourier slides</title>
+<title>5_Próbkowanie slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11905,23 +11905,15 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Transformata-Fouriera">Transformata Fouriera<a class="anchor-link" href="#Transformata-Fouriera">&#182;</a></h1>
+<h1 id="Pr&#243;bkowanie-i-kwantyzacja">Pr&#243;bkowanie i kwantyzacja<a class="anchor-link" href="#Pr&#243;bkowanie-i-kwantyzacja">&#182;</a></h1>
 </div>
 </div>
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Przypomnienie">Przypomnienie<a class="anchor-link" href="#Przypomnienie">&#182;</a></h1><ul>
-<li>Co to jest liczba zespolona?</li>
-<li>Co to jest postać trygonometryczna liczby zespolonej?</li>
-<li>Czym się różni układ kartezjański od polarnego?</li>
-</ul>
-<p><img src="images/imaginary.svg" alt=""></p>
-<ul>
-<li>Jak policzyć $r$ i $\varphi$ na podstawie $\Re$ i $\Im$ oraz w odwrotną stronę?</li>
-</ul>
+<h2 id="Przypomnienie">Przypomnienie<a class="anchor-link" href="#Przypomnienie">&#182;</a></h2><h3 id="Sygna&#322;-Ci&#261;g&#322;y">Sygna&#322; Ci&#261;g&#322;y<a class="anchor-link" href="#Sygna&#322;-Ci&#261;g&#322;y">&#182;</a></h3><p><img src="images/analog.png" alt=""></p>
 
 </div>
 </div>
@@ -11930,38 +11922,25 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Polarne-$\rightarrow$-kartezja&#324;skie">Polarne $\rightarrow$ kartezja&#324;skie<a class="anchor-link" href="#Polarne-$\rightarrow$-kartezja&#324;skie">&#182;</a></h3><p>\begin{equation}
-\Re=A \cos \varphi \\
-\Im=A \sin \varphi \\
-\end{equation}</p>
-<h3 id="Kartezja&#324;skie-$\rightarrow$-polarne">Kartezja&#324;skie $\rightarrow$ polarne<a class="anchor-link" href="#Kartezja&#324;skie-$\rightarrow$-polarne">&#182;</a></h3><p>\begin{equation}
-A = \sqrt{\Re^2+\Im^2} \\
-\varphi = \text{atan2}(\Im,\Re) \approx \arctan \left(\frac{\Im}{\Re}\right)
-\end{equation}</p>
-<h3 id="Wz&#243;r-Eulera">Wz&#243;r Eulera<a class="anchor-link" href="#Wz&#243;r-Eulera">&#182;</a></h3><p>\begin{equation}
-z=\Re + i\cdot\Im \\
-z=A\cdot(\cos{\varphi} + i\cdot\sin{\varphi})\\
-e^{ix}=\cos{x}+i\sin{x} \\
-z=A\cdot e^{i\varphi}
-\end{equation}</p>
+<h3 id="Pr&#243;bkowanie">Pr&#243;bkowanie<a class="anchor-link" href="#Pr&#243;bkowanie">&#182;</a></h3><p><img src="images/discrete_time.png" alt=""></p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Szereg-Taylora">Szereg Taylora<a class="anchor-link" href="#Szereg-Taylora">&#182;</a></h1><p>\begin{equation}
-f(x) = f(a) + \frac{f'(a)}{1!} (x-a) + \frac{f''(a)}{2!} (x-a)^2 + \frac{f'''(a)}{3!} (x-a)^3 +\ldots
-\end{equation}</p>
-<p>\begin{equation}
-f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!} (x-a)^n
-\end{equation}</p>
-<ul>
-<li>gdzie $f^{(0)}(x)=f(x)$ i $0!=1$</li>
-<li>dla $a=0$ znany jako szereg Maclaurina</li>
-</ul>
+<h3 id="Kwantyzacja">Kwantyzacja<a class="anchor-link" href="#Kwantyzacja">&#182;</a></h3><p><img src="images/discrete_value.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sygna&#322;-cyfrowy">Sygna&#322; cyfrowy<a class="anchor-link" href="#Sygna&#322;-cyfrowy">&#182;</a></h3><p><img src="images/digital.png" alt=""></p>
 
 </div>
 </div>
@@ -11970,23 +11949,65 @@ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!} (x-a)^n
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Szereg-Fouriera">Szereg Fouriera<a class="anchor-link" href="#Szereg-Fouriera">&#182;</a></h1><ul>
-<li>dla ortogonalnych składowcyh $g_1\ldots g_n$ oraz współczynników $a_1\ldots a_n$ weźmy:</li>
+<h2 id="Pr&#243;bkowanie">Pr&#243;bkowanie<a class="anchor-link" href="#Pr&#243;bkowanie">&#182;</a></h2><ul>
+<li>polega na zapisywaniu chwilowej wartości sygnału w regularnych odstępach czasowych<ul>
+<li>uwzględniając dokładność w czasie, chwilowość i szum</li>
+</ul>
+</li>
+<li>otrzymujemy szereg dyskretnych impulsów reprezentujących ciągły sygnał</li>
+<li>jakie ciągłe sygnały możemy odtworzyć na podstawie wybranych impulsów?</li>
+<li>jak próbkować żeby nie było problemów z odtworzeniem ciągłego sygnału?</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Interpolacja">Interpolacja<a class="anchor-link" href="#Interpolacja">&#182;</a></h3><p><img src="images/interpolation.png?1" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Wystarczaj&#261;ca-ilo&#347;&#263;-pr&#243;bek">Wystarczaj&#261;ca ilo&#347;&#263; pr&#243;bek<a class="anchor-link" href="#Wystarczaj&#261;ca-ilo&#347;&#263;-pr&#243;bek">&#182;</a></h3><p><img src="images/oversample.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Niedostateczna-ilo&#347;&#263;-pr&#243;bek">Niedostateczna ilo&#347;&#263; pr&#243;bek<a class="anchor-link" href="#Niedostateczna-ilo&#347;&#263;-pr&#243;bek">&#182;</a></h3><p><img src="images/undersample.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Pr&#243;bkowanie-jako-iloczyn-z-szeregiem-delt">Pr&#243;bkowanie jako iloczyn z szeregiem delt<a class="anchor-link" href="#Pr&#243;bkowanie-jako-iloczyn-z-szeregiem-delt">&#182;</a></h3><ul>
+<li>Zdefiniujmy próbkowanie w dziedzinie czasu:</li>
 </ul>
 <p>\begin{equation}
-f(t)=a_1\cdot g_1(t) + a_2\cdot g_2(t) + a_3\cdot g_3(t) + \ldots + a_n\cdot g_n(t) = \sum_{n=1}^{\infty}a_n\cdot g_n(t)
+x_p(t)=x_c(t)\cdot\delta(t)
 \end{equation}</p>
 <ul>
-<li>wybierzmy sobie składową $g_1$ i pomnożmy obydwie strony równania:</li>
+<li>W dziedzinie częstotliowści wygląda ono tak:</li>
 </ul>
 <p>\begin{equation}
-g_1(t)\cdot f(t)=a_1\cdot g_1^2(t) + \sum_{n=2}^{\infty} a_n\cdot g_n(t)\cdot g_1(t)
-\end{equation}</p>
-<ul>
-<li>wyliczmy całkę z obydwu stron równania:</li>
-</ul>
-<p>\begin{equation}
-\int_{t_1}^{t_2} g_1(t)\cdot f(t) dt=\int_{t_1}^{t_2} a_1\cdot g_1^2(t)\ dt + \sum_{n=2}^{\infty} \int_{t_1}^{t_2} a_n\cdot g_n(t)\cdot g_1(t)\ dt
+\begin{array}{ll}
+X_p(\omega) &amp; = \frac{1}{2\pi} X_c(\omega)*D(\omega) \\
+  &amp; = \frac{1}{2\pi}X_c(\omega)*\left[\frac{2\pi}{T}\sum_{k=-\infty}^{\infty} \delta(\omega-k\omega_p) \right] \\
+  &amp; = \frac{1}{T} \sum_{k=\infty}^{\infty}X_c(\omega-k\omega_p)
+\end{array}
 \end{equation}</p>
 
 </div>
@@ -11996,24 +12017,8 @@ g_1(t)\cdot f(t)=a_1\cdot g_1^2(t) + \sum_{n=2}^{\infty} a_n\cdot g_n(t)\cdot g_
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Szereg-Fouriera">Szereg Fouriera<a class="anchor-link" href="#Szereg-Fouriera">&#182;</a></h2><ul>
-<li>ponieważ wszystkie składowe są ortogonalne, ich iloczyn jest równy 0, więc możemy usunąć większość równania:</li>
-</ul>
-<p>\begin{equation}
-\int_{t_1}^{t_2} g_1(t)\cdot f(t)\ dt=\int_{t_1}^{t_2} a_1\cdot g_1^2(t)\ dt = a_1\cdot \int_{t_1}^{t_2} g_1^2(t)\ dt
-\end{equation}</p>
-<ul>
-<li>dla współczynnika $a_1$ zachodzi więc:</li>
-</ul>
-<p>\begin{equation}
-a_1=\frac{\int_{t_1}^{t_2} g_1(t)\cdot f(t)\ dt}{\int_{t_1}^{t_2} g_1^2(t)\ dt}
-\end{equation}</p>
-<ul>
-<li>dla innych współczynników $a_n$ można policzyć podobne równanie</li>
-</ul>
-<p>\begin{equation}
-a_n=\frac{\int_{t_1}^{t_2} g_n(t)\cdot f(t)\,dt}{\int_{t_1}^{t_2} g_n^2(t)\ dt}
-\end{equation}</p>
+<h3 id="Szereg-delt">Szereg delt<a class="anchor-link" href="#Szereg-delt">&#182;</a></h3><h4 id="(ang.-delta-pulse-train)">(ang. delta pulse train)<a class="anchor-link" href="#(ang.-delta-pulse-train)">&#182;</a></h4><p><img src="images/pulsetrain1.png" style="width:400px">
+<img src="images/pulsetrain2.png" style="width:400px"></p>
 
 </div>
 </div>
@@ -12022,27 +12027,7 @@ a_n=\frac{\int_{t_1}^{t_2} g_n(t)\cdot f(t)\,dt}{\int_{t_1}^{t_2} g_n^2(t)\ dt}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Trygonometryczny-szereg-Fouriera">Trygonometryczny szereg Fouriera<a class="anchor-link" href="#Trygonometryczny-szereg-Fouriera">&#182;</a></h2><ul>
-<li>Fourier jako funkcję $g_n$ przyjął funkcję $\sin$:</li>
-</ul>
-<p>\begin{equation}
-f(t) = \frac{A_0}{2} + \sum_{n=1}^{\infty}A_n\cdot\sin(n\omega_0t+\varphi_n)
-\end{equation}</p>
-<p>(gdzie $\omega_0=\frac{2\pi}{T_0}$)</p>
-<ul>
-<li>Ze względu na następujące równości:</li>
-</ul>
-<p>\begin{equation}
-\sin(n\omega_0t+\varphi_n) = \sin(\varphi_n)\cos(n\omega_0t)+\cos(\varphi_n)\sin(n\omega_0t) \\
-a_n=A_n\sin(\phi_n)\ \text{(jako $\Re$)} \\
-b_n=A_n\cos(\phi_n)\ \text{(jako $\Im$)}
-\end{equation}</p>
-<ul>
-<li>Wzór jest często zapisywany jako:</li>
-</ul>
-<p>\begin{equation}
-f(t) = \frac{a_0}{2} + \sum_{n=1}^{\infty}a_n\cdot\cos(n\omega_0t)+b_n\cdot\sin(n\omega_0t)
-\end{equation}</p>
+<p><img src="images/sampling1.png" alt=""></p>
 
 </div>
 </div>
@@ -12051,45 +12036,24 @@ f(t) = \frac{a_0}{2} + \sum_{n=1}^{\infty}a_n\cdot\cos(n\omega_0t)+b_n\cdot\sin(
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Trygonometryczny-szereg-Fouriera">Trygonometryczny szereg Fouriera<a class="anchor-link" href="#Trygonometryczny-szereg-Fouriera">&#182;</a></h2><p>\begin{equation}
-f(t) = a_0 + \sum_{n=1}^{\infty}a_n\cdot\cos(n\omega_0t)+b_n\cdot\sin(n\omega_0t)
-\end{equation}</p>
-<ul>
-<li>gdzie $a_n$ i $b_n$ to tzw. <em>współczynniki Fouriera</em>:</li>
-</ul>
-<p>\begin{equation}
-a_0 = \frac{1}{T_0}\int_{0}^{T_0}f(t)\ dt \\
-a_n = \frac{2}{T_0}\int_{0}^{T_0}f(t)\cdot\cos(n\omega_0t)\ dt \\
-b_n = \frac{2}{T_0}\int_{0}^{T_0}f(t)\cdot\sin(n\omega_0t)\ dt \\
-\end{equation}</p>
+<h3 id="Z&#322;y-przypadek">Z&#322;y przypadek<a class="anchor-link" href="#Z&#322;y-przypadek">&#182;</a></h3><p><img src="images/sampling2.png" alt=""></p>
 
 </div>
 </div>
-</div></section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zespolony-szereg-Fouriera">Zespolony szereg Fouriera<a class="anchor-link" href="#Zespolony-szereg-Fouriera">&#182;</a></h2><ul>
-<li>Częściej jednak używany jest zapis w dziedzinie liczb zespolonych:</li>
-</ul>
-<p>\begin{equation}
-f(t) = \sum_{n=-\infty}^{\infty}F_n\cdot e^{in\omega_0t}
-\end{equation}</p>
-<ul>
-<li>gdzie $F_n$ wyliczamy:</li>
-</ul>
-<p>\begin{equation}
-F_n=\frac{1}{T_0}\int_{0}^{T_0}f(t)\cdot e^{-jn\omega_0t}\ dt
-\end{equation}</p>
-<ul>
-<li>można wykazać, że:
+<h2 id="Twierdzenie-o-pr&#243;bkowaniu">Twierdzenie o pr&#243;bkowaniu<a class="anchor-link" href="#Twierdzenie-o-pr&#243;bkowaniu">&#182;</a></h2><ul>
+<li>Niech $\omega_p$ to częstotliwość próbkowania</li>
+<li>Niech $\omega_{max}$ to maksymalna częstotliwość ciągłego sygnału</li>
+<li>Wtedy:
 \begin{equation}
-F_0=a_0 \\
-F_{-n}=F_n^{*} \quad |F_n|=|F_{-n}| \quad \angle(F_n)=-\angle(F_{-n}) \\
-F_n=0.5\cdot(a_n-i\cdot b_n) \quad F_{-n}=0.5\cdot(a_n+i\cdot b_n) \\
-a_n=(F_n+F_{-n}) \quad b_n=i\cdot(F_n+F_{-n}) \quad A_n=\sqrt{a_n^2+b_n^2}=2|F_n|
+\omega_p &gt; 2\cdot\omega_{max}
 \end{equation}</li>
+<li>Częstotliwość $\omega_{max}$ we wzorze powyżej jest znana pod nazwą częstotliwości Nyquista albo Shannona</li>
+<li>Jako dowód, na poprzednim rysunku widzimy, że $\omega_{max}$ musi być mniejsze od $\omega_p-\omega_{max}$</li>
 </ul>
 
 </div>
@@ -12099,34 +12063,7 @@ a_n=(F_n+F_{-n}) \quad b_n=i\cdot(F_n+F_{-n}) \quad A_n=\sqrt{a_n^2+b_n^2}=2|F_n
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Przyk&#322;ady-online">Przyk&#322;ady online<a class="anchor-link" href="#Przyk&#322;ady-online">&#182;</a></h2><p><a href="https://www.intmath.com/fourier-series/fourier-graph-applet.php">https://www.intmath.com/fourier-series/fourier-graph-applet.php</a></p>
-<p><a href="http://www.mathstools.com/section/main/fourier_series_calculator">http://www.mathstools.com/section/main/fourier_series_calculator</a></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Transformata-Fouriera">Transformata Fouriera<a class="anchor-link" href="#Transformata-Fouriera">&#182;</a></h1><p>\begin{equation}
-F_n=\frac{1}{T_0}\int_{0}^{T_0}f(t)\cdot e^{-jn\omega_0t}\ dt
-\end{equation}</p>
-<ul>
-<li><p>Szereg Fouriera zdefiniowani dla sygnałów okresowych (z okresem $T_0$)!</p>
-</li>
-<li><p>Jak wyliczyć szereg Fouriera dla sygnałów nie-okresowych?</p>
-<ul>
-<li><p>Jak $T_0\rightarrow\infty$ to $\omega_0\rightarrow0$</p>
-</li>
-<li><p>Z tego wynika że współczynniki $F_n$ zamiast szeregu punktów $\rightarrow$ funckja wartości rzeczywistych $F(\xi)$</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>\begin{equation}
-F(\xi) = \int_{-\infty}^{\infty} f(t)e^{-2\pi i t \xi} dt
-\end{equation}</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Aliasing-folding.png" alt="aliasing"></p>
 
 </div>
 </div>
@@ -12135,39 +12072,8 @@ F(\xi) = \int_{-\infty}^{\infty} f(t)e^{-2\pi i t \xi} dt
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Transformata-Fouriera">Transformata Fouriera<a class="anchor-link" href="#Transformata-Fouriera">&#182;</a></h1><ul>
-<li>Funkcja analityczna:</li>
-</ul>
-<p>\begin{equation}
-F(\xi) = \int_{-\infty}^{\infty} f(t)e^{-2\pi i t \xi} dt
-\end{equation}</p>
-<ul>
-<li>Funkcja syntetyczna (odwrotna):</li>
-</ul>
-<p>\begin{equation}
-f(t) = \int_{-\infty}^{\infty} F(\xi)e^{2\pi i t \xi} dt
-\end{equation}</p>
-<ul>
-<li>Oprócz samego rozkładu w dziedzinie częstotliwości, istotne jest też<ul>
-<li>Widmo amplitudowe: $|F(\xi)|$</li>
-<li>Widmo fazowe: $\angle[F(\xi)]$</li>
-<li>Widmo mocy: $|F(\xi)|^2$</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Kiedy-mo&#380;na-liczy&#263;?">Kiedy mo&#380;na liczy&#263;?<a class="anchor-link" href="#Kiedy-mo&#380;na-liczy&#263;?">&#182;</a></h2><ul>
-<li>ograniczona energia: $\int_{-\infty}^{\infty}\lvert x(t) \rvert^2dt&lt;\infty$</li>
-<li>ograniczona ilość ekstremów</li>
-<li>ograniczona ilość nieciągłości</li>
-<li>dowolny sygnał okresowy (w tym o nieskończonej energii)</li>
+<h2 id="Czy-jest-dobrze-je&#347;li-$\omega_p-=-2\cdot\omega_{max}$?">Czy jest dobrze je&#347;li $\omega_p = 2\cdot\omega_{max}$?<a class="anchor-link" href="#Czy-jest-dobrze-je&#347;li-$\omega_p-=-2\cdot\omega_{max}$?">&#182;</a></h2><ul>
+<li>Co się stanie w przypadku funkcji $\cos(t)$, a co w przypadku funkcji $\sin(t)$?</li>
 </ul>
 
 </div>
@@ -12177,232 +12083,7 @@ f(t) = \int_{-\infty}^{\infty} F(\xi)e^{2\pi i t \xi} dt
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Dyskretna-transformata-Fouriera">Dyskretna transformata Fouriera<a class="anchor-link" href="#Dyskretna-transformata-Fouriera">&#182;</a></h1><ul>
-<li><p>W przypadku sygnału cyfrowego</p>
-</li>
-<li><p>Funkcja analityczna:</p>
-</li>
-</ul>
-<p>\begin{equation}
-X_k=\sum_{n=0}^{N-1} x_n \cdot e ^ {-i2\pi k n/N},\, k \in \mathbb{Z}
-\end{equation}</p>
-<ul>
-<li>Funkcja syntetyczna (odwrotna):</li>
-</ul>
-<p>\begin{equation}
-x_n=\frac{1}{N} \sum_{k=0}^{N-1} X_k \cdot e ^ {i2\pi k n/N},\, N \in \mathbb{Z}
-\end{equation}</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Rodzaje-transformaty-Fouriera">Rodzaje transformaty Fouriera<a class="anchor-link" href="#Rodzaje-transformaty-Fouriera">&#182;</a></h1><p><img src="images/fourier1.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Szereg-Fouriera">Szereg Fouriera<a class="anchor-link" href="#Szereg-Fouriera">&#182;</a></h2><p><img src="images/fourier2.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="DTFT">DTFT<a class="anchor-link" href="#DTFT">&#182;</a></h2><p><img src="images/fourier3.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="DFT">DFT<a class="anchor-link" href="#DFT">&#182;</a></h2><p><img src="images/fourier4.png" alt=""></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="W&#322;a&#347;ciwo&#347;ci-transformaty-Fouriera">W&#322;a&#347;ciwo&#347;ci transformaty Fouriera<a class="anchor-link" href="#W&#322;a&#347;ciwo&#347;ci-transformaty-Fouriera">&#182;</a></h1><p>\begin{equation}
-f(t) \qquad\rightarrow\qquad F(\omega)
-\end{equation}</p>
-<h3 id="Odwrotno&#347;&#263;">Odwrotno&#347;&#263;<a class="anchor-link" href="#Odwrotno&#347;&#263;">&#182;</a></h3><p>\begin{equation}
-F(t) \qquad\rightarrow\qquad 2\pi f(-\omega)
-\end{equation}</p>
-<h3 id="Splot">Splot<a class="anchor-link" href="#Splot">&#182;</a></h3><p>\begin{equation}
-f_1\star f_2(t) \qquad\rightarrow\qquad F_1(\omega)F_2(\omega)
-\end{equation}</p>
-<h3 id="Iloczyn">Iloczyn<a class="anchor-link" href="#Iloczyn">&#182;</a></h3><p>\begin{equation}
-f_1(t)f_2(t) \qquad\rightarrow\qquad \frac{1}{2\pi}F_1\star F_2(\omega)
-\end{equation}</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Przesuni&#281;cie">Przesuni&#281;cie<a class="anchor-link" href="#Przesuni&#281;cie">&#182;</a></h3><p>\begin{equation}
-f(t-u) \qquad\rightarrow\qquad e^{-iu\omega}F(\omega)
-\end{equation}</p>
-<h3 id="Modulacja-amplitudowa">Modulacja amplitudowa<a class="anchor-link" href="#Modulacja-amplitudowa">&#182;</a></h3><p>\begin{equation}
-e^{i\xi t}f(t) \qquad\rightarrow\qquad F(\omega-\xi)
-\end{equation}</p>
-<h3 id="Skalowanie">Skalowanie<a class="anchor-link" href="#Skalowanie">&#182;</a></h3><p>\begin{equation}
-f(t/s)  \qquad\rightarrow\qquad  |s|F(s\omega)
-\end{equation}</p>
-<h3 id="Pochodna-czasowa">Pochodna czasowa<a class="anchor-link" href="#Pochodna-czasowa">&#182;</a></h3><p>\begin{equation}
-f^{(p)}(t) \qquad\rightarrow\qquad (i\omega)^{(p)}F(\omega)
-\end{equation}</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Pochodna-cz&#281;stotliwo&#347;ciowa">Pochodna cz&#281;stotliwo&#347;ciowa<a class="anchor-link" href="#Pochodna-cz&#281;stotliwo&#347;ciowa">&#182;</a></h3><p>\begin{equation}
-(-it)^{(p)}f(t) \qquad\rightarrow\qquad F^{(p)}(\omega)
-\end{equation}</p>
-<h3 id="Sprz&#281;&#380;enie-zespolone">Sprz&#281;&#380;enie zespolone<a class="anchor-link" href="#Sprz&#281;&#380;enie-zespolone">&#182;</a></h3><p>\begin{equation}
-f^{\star}(t)  \qquad\rightarrow\qquad F^{\star}(-\omega)
-\end{equation}</p>
-<h3 id="Symetria-hermitowska">Symetria hermitowska<a class="anchor-link" href="#Symetria-hermitowska">&#182;</a></h3><p>\begin{equation}
-f(t)\in \mathbb{R}  \qquad\rightarrow\qquad F(-\omega)=F^{\star}(\omega)
-\end{equation}</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Jeszcze-o-symetrii">Jeszcze o symetrii<a class="anchor-link" href="#Jeszcze-o-symetrii">&#182;</a></h2><ul>
-<li>dla każdego rzeczywistego sygnału $f(t)$, Transformata Fouriera ma następujące właściwości:<ul>
-<li>$\Re(F)$ - jest funkcją parzystą</li>
-<li>$\Im(F)$ - jest funkcją nie-parzystą</li>
-<li>$\lvert F \rvert$ - jest funkcją parzystą</li>
-<li>$\angle(f)$ jest funkcją nie-parzystą</li>
-</ul>
-</li>
-<li>jeśli $X$ nie jest symetryczna j/w, odwrotna TF nie jest sygnałem rzeczywistym (tylko zespolonym)</li>
-<li>dodatkowo:<ul>
-<li>jeśli $f(t)$ jest rzeczywiste i parzyste - $F(\omega)$ jest całkowicie rzeczywiste i parzyste</li>
-<li>jeśli $f(t)$ jest rzeczywiste i nie-parzyste - $F(\omega)$ jest całkowicie urojone i nieparzyste</li>
-</ul>
-</li>
-<li>ponieważ każdy sygnał $f(t)$ można rozłożyć na część parzystą i nie-parzystą:<ul>
-<li>parzysta składowa sygnału $f(t)$ odpowiada $\Re[F(\omega)]$</li>
-<li>nie-parzysta składowa sygnału $f(t)$ odpowiada $i\Im[F(\omega)]$</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Twierdzenie-Parsevala">Twierdzenie Parsevala<a class="anchor-link" href="#Twierdzenie-Parsevala">&#182;</a></h2><p>\begin{equation}
-\int_{-\infty}^{\infty}f(x)g^{*}(x)\ dx=\int_{-\infty}^{\infty}F(\xi)G^{*}(\xi)\ d\xi
-\end{equation}</p>
-<h2 id="Twierdzenie-Plancherela">Twierdzenie Plancherela<a class="anchor-link" href="#Twierdzenie-Plancherela">&#182;</a></h2><p>\begin{equation}
-\int_{-\infty}^{\infty}||f(x)||^2\ dx=\int_{-\infty}^{\infty}||F(\xi)||^2\ d\xi
-\end{equation}</p>
-<ul>
-<li>Moc sygnału</li>
-</ul>
-<p>\begin{equation}
-P=\lim_{T\rightarrow\infty} \int_{-\infty}^{\infty} |f(t)|^2 dt
-\end{equation}</p>
-<ul>
-<li>Dla sygnałów dyskretnych:</li>
-</ul>
-<p>\begin{equation}
-\sum_{n=0}^{N-1}|x[n]|^2 = \frac{1}{N} \sum_{k=0}^{N-1}|X[k]|^2
-\end{equation}</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Przyk&#322;ady">Przyk&#322;ady<a class="anchor-link" href="#Przyk&#322;ady">&#182;</a></h1><p><img src="images/fourier_sample1.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/fourier_sample2.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/fourier_sample3.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/fourier_sample4.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/fourier_sample5.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/fourier_sample6.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/fourier_sample7.png" alt=""></p>
-
+<h2 id="Kwantyzacja">Kwantyzacja<a class="anchor-link" href="#Kwantyzacja">&#182;</a></h2>
 </div>
 </div>
 </div></section></section>
