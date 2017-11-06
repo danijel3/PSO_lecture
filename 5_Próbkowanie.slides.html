@@ -12052,7 +12052,7 @@ X_p(\omega) &amp; = \frac{1}{2\pi} X_c(\omega)*D(\omega) \\
 \begin{equation}
 \omega_p &gt; 2\cdot\omega_{max}
 \end{equation}</li>
-<li>Częstotliwość $\omega_{max}$ we wzorze powyżej jest znana pod nazwą częstotliwości Nyquista albo Shannona</li>
+<li>Częstotliwość $2\cdot\omega_{max}$ we wzorze powyżej jest znana pod nazwą częstotliwości Nyquista albo Shannona</li>
 <li>Jako dowód, na poprzednim rysunku widzimy, że $\omega_{max}$ musi być mniejsze od $\omega_p-\omega_{max}$</li>
 </ul>
 
@@ -12063,7 +12063,7 @@ X_p(\omega) &amp; = \frac{1}{2\pi} X_c(\omega)*D(\omega) \\
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Aliasing-folding.png" alt="aliasing"></p>
+<h2 id="Aliasing">Aliasing<a class="anchor-link" href="#Aliasing">&#182;</a></h2><p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Aliasing-folding.png" alt=""></p>
 
 </div>
 </div>
@@ -12078,12 +12078,146 @@ X_p(\omega) &amp; = \frac{1}{2\pi} X_c(\omega)*D(\omega) \\
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Przyk&#322;adowe-warto&#347;ci-cz&#281;stotliwo&#347;ci-pr&#243;bkowania">Przyk&#322;adowe warto&#347;ci cz&#281;stotliwo&#347;ci pr&#243;bkowania<a class="anchor-link" href="#Przyk&#322;adowe-warto&#347;ci-cz&#281;stotliwo&#347;ci-pr&#243;bkowania">&#182;</a></h2><ul>
+<li>8000 Hz - telefoniczna, wystarczająca do przeniesienia informacji o mowie</li>
+<li>16000 Hz - wideband telephony, transmisja sygnału mowy wyższej jakości (m.in. VoIP, ASR) </li>
+<li>32/36 kHz - kasety audio</li>
+<li>44100 Hz - audio CD, MPEG-1 (na podstawie PAL: 3 próbki, 588 linii, 25 fps)<ul>
+<li>11025, 22050 - dla formatów audio niskiej wartości</li>
+<li>44056 - j/w ale dla NTSC</li>
+</ul>
+</li>
+<li>48000 Hz - standard dla wysokiej jakości audio w nagraniach studyjnych</li>
+<li>96, 192, ... kHz - DVD, BluRay, ultradźwięki?</li>
+</ul>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Kwantyzacja">Kwantyzacja<a class="anchor-link" href="#Kwantyzacja">&#182;</a></h2>
+<h2 id="Kwantyzacja">Kwantyzacja<a class="anchor-link" href="#Kwantyzacja">&#182;</a></h2><p><img src="images/discrete_value.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Kwantyzacja-r&#243;wnomierna">Kwantyzacja r&#243;wnomierna<a class="anchor-link" href="#Kwantyzacja-r&#243;wnomierna">&#182;</a></h2><p>(8 poziomów = 3 bity)</p>
+<p><img src="images/uniform_quant.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Drabinka-rezystor&#243;w">Drabinka rezystor&#243;w<a class="anchor-link" href="#Drabinka-rezystor&#243;w">&#182;</a></h3><p><img src="images/R2r-ladder.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="W&#322;a&#347;ciwo&#347;ci">W&#322;a&#347;ciwo&#347;ci<a class="anchor-link" href="#W&#322;a&#347;ciwo&#347;ci">&#182;</a></h2><ul>
+<li>Operację kwantyzacji traktujemy jako $\hat{x}(t) = \lfloor x(t)\cdot L \rfloor$, gdzie $L$ to ilość poziomów<ul>
+<li>zakładamy że sygnał $x(t)$ jest w zakresie $&lt;0,1&gt;$</li>
+</ul>
+</li>
+<li>Rekonstrukcja sygnału $x(t) = \hat{x}(t)/L+\epsilon(t)$, gdzie $\epsilon$ to błąd kwantyzacji</li>
+<li>Błąd ten jest zmienną losową w zakresie $&lt;0..1/L&gt;$ i ma rozkład równomierny</li>
+<li>Błąd jest niezależny od sygnału, stąd sprawia wrażenie szumu jednorodnego</li>
+<li>Szum wynikający z błędu kwantyzacji jest często nazywany <strong>szumem kwantyzacyjnym</strong></li>
+<li>Kodowanie PCM wykorzystuję kwantyzację równomierną z 16-bitami na kodowanie poziomów</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="SNR-jako-miara-jako&#347;ci-sygna&#322;u">SNR jako miara jako&#347;ci sygna&#322;u<a class="anchor-link" href="#SNR-jako-miara-jako&#347;ci-sygna&#322;u">&#182;</a></h2><ul>
+<li>Signal-to-noise ratio - stosunek sygnału do szumu</li>
+</ul>
+<p>\begin{equation}
+\text{SNR} = \frac{\sigma_{\text{sygnał}}}{\sigma_{\text{szum}}}
+\end{equation}</p>
+<ul>
+<li>Pamiętaj że szum zdefiniowaliśmy jako $\epsilon(t)=x(t)-\hat{x}(t)$</li>
+<li>Można go też oszacować na podstawie mocy sygnału</li>
+</ul>
+<p>\begin{equation}
+\text{SNR} = \frac{P_{\text{sygnał}}}{P_{\text{szum}}}
+\end{equation}</p>
+<ul>
+<li>Często podajemy w decybelach: $SNR_{dB} = 10\cdot log_{10}(SNR)$</li>
+<li>Ogólna zasada: każdy 1 bit poprawia SNR o ~6 dB</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Czy-mo&#380;na-lepiej-ni&#380;-kwantyzacja-r&#243;wnomierna?">Czy mo&#380;na lepiej ni&#380; kwantyzacja r&#243;wnomierna?<a class="anchor-link" href="#Czy-mo&#380;na-lepiej-ni&#380;-kwantyzacja-r&#243;wnomierna?">&#182;</a></h2><p><img src="images/log_quant.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Kodowania-logarytmiczne">Kodowania logarytmiczne<a class="anchor-link" href="#Kodowania-logarytmiczne">&#182;</a></h2><ul>
+<li>$\mu$-law  / A-law </li>
+<li>stosowane w telefonii (8-bitów, T0/POTS 64 kb/s)</li>
+<li>wzór na kodowanie $\mu$-law:</li>
+</ul>
+<p>\begin{equation}
+\hat{x}=sgn(x)\frac{ln(1+\mu \vert x \vert)}{ln(1+\mu)}
+\end{equation}</p>
+<ul>
+<li>gdzie $x\in &lt;-1,1&gt;$, a $\mu$ to maksymlany poziom (czyli 255 dla 8-bitów)</li>
+<li>dekodowanie:</li>
+</ul>
+<p>\begin{equation}
+x=sgn(\hat{x})(1/\mu)((1+\mu)^{\vert\hat{x}\vert}-1
+\end{equation}</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Czy-mo&#380;na-lepiej?">Czy mo&#380;na lepiej?<a class="anchor-link" href="#Czy-mo&#380;na-lepiej?">&#182;</a></h2><ul>
+<li>dystrybuanta wartości sygnału i algorytm Lloyd-Max</li>
+<li>kodowanie adaptacyjne A-PCM<ul>
+<li>feed-forward - paramter adaptacyjny liczony na $x(t)$ i przesyłany z sygnałem</li>
+<li>feed-back - parametr adaptacyjny liczony na $\hat{x}(t)$</li>
+</ul>
+</li>
+<li>kodowanie różnicowe D-PCM</li>
+<li>algorytm ADPCM</li>
+</ul>
+
 </div>
 </div>
 </div></section></section>
