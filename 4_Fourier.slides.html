@@ -12184,13 +12184,15 @@ f(t) = \int_{-\infty}^{\infty} F(\xi)e^{2\pi i t \xi} dt
 </li>
 </ul>
 <p>\begin{equation}
-X_k=\sum_{n=0}^{N-1} x_n \cdot e ^ {-i2\pi k n/N},\, k \in \mathbb{Z}
+X_k=\sum_{n=0}^{N-1} x_n e ^ {-i2\pi k n/N} \\
+k \in 0\ldots N-1
 \end{equation}</p>
 <ul>
 <li>Funkcja syntetyczna (odwrotna):</li>
 </ul>
 <p>\begin{equation}
-x_n=\frac{1}{N} \sum_{k=0}^{N-1} X_k \cdot e ^ {i2\pi k n/N},\, N \in \mathbb{Z}
+x_n=\frac{1}{N} \sum_{k=0}^{N-1} X_k e ^ {i2\pi k n/N}\\
+n \in 0\ldots N-1
 \end{equation}</p>
 
 </div>
