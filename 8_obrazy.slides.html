@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>7_filtry slides</title>
+<title>8_obrazy slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11905,7 +11905,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Filtry-cyfrowe">Filtry cyfrowe<a class="anchor-link" href="#Filtry-cyfrowe">&#182;</a></h1><h2 id="Projektowanie-i-cechy">Projektowanie i cechy<a class="anchor-link" href="#Projektowanie-i-cechy">&#182;</a></h2>
+<h1 id="Cyfrowe-obrazy">Cyfrowe obrazy<a class="anchor-link" href="#Cyfrowe-obrazy">&#182;</a></h1><h2 id="Wprowadzenie">Wprowadzenie<a class="anchor-link" href="#Wprowadzenie">&#182;</a></h2>
 </div>
 </div>
 </div></section></section><section><section>
@@ -11913,20 +11913,41 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Transformata-Laplace'a">Transformata Laplace'a<a class="anchor-link" href="#Transformata-Laplace'a">&#182;</a></h1><p>\begin{equation}
-F(s)=\int_{-\infty}^{\infty} f(t)e^{-st}dt
-\end{equation}</p>
-<h2 id="Transformata-Fouriera">Transformata Fouriera<a class="anchor-link" href="#Transformata-Fouriera">&#182;</a></h2><p>\begin{equation}
-\hat{f}(\omega)=\int_{-\infty}^{\infty} f(t)e^{-i\omega t}dt
+<h2 id="&#346;wiat&#322;o">&#346;wiat&#322;o<a class="anchor-link" href="#&#346;wiat&#322;o">&#182;</a></h2><ul>
+<li>część promieniowania elektromagnetycznego</li>
+<li>widoczne (przez ludzi) w zakresie ~400-700 nm</li>
+<li>prędkość w próźni 299 792 458 m/s</li>
+<li>częstotliwość między $4 \text{ a } 8 \cdot 10^{14} Hz$ ( $400 - 800 THz$ )</li>
+<li>"dualizm korpuskularno-falowy"
+  -rozszczepienie, dyfrakcja</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Spektrum-elektromagnetyczne">Spektrum elektromagnetyczne<a class="anchor-link" href="#Spektrum-elektromagnetyczne">&#182;</a></h3><p><img src="images/EM_spectrum.svg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Miary">Miary<a class="anchor-link" href="#Miary">&#182;</a></h2><ul>
+<li>lumen (miara SI)</li>
+</ul>
+<p>\begin{equation}
+1 \text{ lm} = 1 \text{ cd} \cdot \text{ sr}
 \end{equation}</p>
 <ul>
-<li>Czyli:</li>
-</ul>
-<p>\begin{equation}
-s = i\omega
-\end{equation}</p>
-<ul>
-<li>Transformata Laplace'a służy do analizy sygnałów dla których $\hat{f}(t)$ nie istnieje</li>
+<li>candela (cd) - ~jasność jednej świecy ($\frac{1}{683}$ watta na sr światła o barwie 540 THz)</li>
+<li>steradian (sr) - odpowiednik radiana w 3D</li>
+<li>lux - lumen na metr kwadratowy</li>
 </ul>
 
 </div>
@@ -11936,27 +11957,7 @@ s = i\omega
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Transformata-Z">Transformata Z<a class="anchor-link" href="#Transformata-Z">&#182;</a></h2><ul>
-<li>Dyskretna wersja transformaty Laplace'a:</li>
-</ul>
-<p>\begin{equation}
-X(z)=\sum_{n=-\infty}^{\infty}x[n]z^{-n}
-\end{equation}</p>
-<ul>
-<li>Porównując do DFT:</li>
-</ul>
-<p>\begin{equation}
-X(\omega)=\sum_{n=-\infty}^{\infty}x[n]e^{-i\omega n}
-\end{equation}</p>
-<ul>
-<li><p>O ile $\omega$ to rzeczywista częstotliwość sygnału, $z$ to liczba zespolona</p>
-</li>
-<li><p>Mówimy o płaściźnie zespolonej Z (ang. <em>Z plane</em>) gdzie wartość $z=e^i\omega$ to okrąg reprezentujący transformatę Fouriera</p>
-</li>
-<li><p>$X(\omega)$ istnieje jeśli $\sum \left|x[n]\right| &lt; \infty$</p>
-</li>
-<li>$X(z)$ można policzyć dla wielu innych sygnałów</li>
-</ul>
+<p><img src="images/lumen.jpg" style="width: 400px"></p>
 
 </div>
 </div>
@@ -11965,15 +11966,7 @@ X(\omega)=\sum_{n=-\infty}^{\infty}x[n]e^{-i\omega n}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Obszar-zbie&#380;no&#347;ci">Obszar zbie&#380;no&#347;ci<a class="anchor-link" href="#Obszar-zbie&#380;no&#347;ci">&#182;</a></h2><h3 id="(ang.-region-of-convergence---ROC)">(ang. region-of-convergence - ROC)<a class="anchor-link" href="#(ang.-region-of-convergence---ROC)">&#182;</a></h3><ul>
-<li>$X(z)$ jest zbieżne w obszarze punktów, dla których:</li>
-</ul>
-<p>\begin{equation}
-z=\left|\sum_{n=-\infty}^{\infty}x[n]z^{-n}\right| &lt; \infty
-\end{equation}</p>
-<ul>
-<li>System jest stabilny jeśli okrąg jednostkowy (ang. <em>unit circle</em>) należy do ROC</li>
-</ul>
+<p><img src="images/lux.jpg" style="width: 400px"></p>
 
 </div>
 </div>
@@ -11982,10 +11975,7 @@ z=\left|\sum_{n=-\infty}^{\infty}x[n]z^{-n}\right| &lt; \infty
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Obszar-zbie&#380;no&#347;ci">Obszar zbie&#380;no&#347;ci<a class="anchor-link" href="#Obszar-zbie&#380;no&#347;ci">&#182;</a></h2><h3 id="(ang.-region-of-convergence---ROC)">(ang. region-of-convergence - ROC)<a class="anchor-link" href="#(ang.-region-of-convergence---ROC)">&#182;</a></h3><ul>
-<li>W zasadzie mamy do czynienia z następującymy ROC:</li>
-</ul>
-<p><img src="images/roc_types.png?1" alt=""></p>
+<h2 id="Barwa-&#347;wiat&#322;a">Barwa &#347;wiat&#322;a<a class="anchor-link" href="#Barwa-&#347;wiat&#322;a">&#182;</a></h2><p><img src="images/color_temp.png" style="width: 400px"></p>
 
 </div>
 </div>
@@ -11994,53 +11984,7 @@ z=\left|\sum_{n=-\infty}^{\infty}x[n]z^{-n}\right| &lt; \infty
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zera-i-bieguny">Zera i bieguny<a class="anchor-link" href="#Zera-i-bieguny">&#182;</a></h2><ul>
-<li><p>Szególnie nas interesują miejsca w płaściźnie Z w których $|z|=0$ oraz $|z|=\infty$</p>
-</li>
-<li><p>Zera zaznaczamy kółkami, a bieguny krzyżykami, np:</p>
-</li>
-</ul>
-<p><img src="images/polezero.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zasady">Zasady<a class="anchor-link" href="#Zasady">&#182;</a></h2><ul>
-<li><p>ROC to koło albo pierścień ze środkiem w $(0+0i)$</p>
-</li>
-<li><p>ROC nigdy nie zawiera biegunów!</p>
-</li>
-<li><p>Dla skończonego $x[n]$, ROC to cała przestrzeń $Z$ z możliwym wyjątkiem dla $z=0$ lub $z=\infty$</p>
-</li>
-</ul>
-<p><img src="images/roc_types2.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Transmitancja">Transmitancja<a class="anchor-link" href="#Transmitancja">&#182;</a></h2><p>\begin{equation}
-y[n]=x[n]*h[n]
-\end{equation}</p>
-<p>\begin{equation}
-Y(z) = H(z)X(z)
-\end{equation}</p>
-<p>\begin{equation}
-H(z)=\frac{Y(z)}{X(z)}
-\end{equation}</p>
-<p>\begin{equation}
-\left|Y(z)\right| = \left|H(z)\right| \cdot \left|X(z)\right|
-\end{equation}</p>
-<p>\begin{equation}
-\angle Y(z) = \angle H(z) + \angle X(z)
-\end{equation}</p>
+<p><img src="images/colour-temperature-chart.png" style="height: 500px"></p>
 
 </div>
 </div>
@@ -12049,7 +11993,7 @@ H(z)=\frac{Y(z)}{X(z)}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Rodzaje-filtr&#243;w">Rodzaje filtr&#243;w<a class="anchor-link" href="#Rodzaje-filtr&#243;w">&#182;</a></h1><p><img src="images/filter_types.png" style="height:500px"></p>
+<h2 id="Oko">Oko<a class="anchor-link" href="#Oko">&#182;</a></h2><p><img src="images/oko.png" alt=""></p>
 
 </div>
 </div>
@@ -12058,101 +12002,23 @@ H(z)=\frac{Y(z)}{X(z)}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zagadka?">Zagadka?<a class="anchor-link" href="#Zagadka?">&#182;</a></h2><p><img src="images/pole_zero_filters.jpg" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>Zazwyczaj projektujemy dolno-przepustowe filtry</p>
-</li>
-<li><p>Górno-przepustowy można zaprojektować odejmując dolno-przepustowy od 1:</p>
-<ul>
-<li>$H_{hi}(z)=1-H_{lo}(z)=H_{lo}(e^{j\omega-\pi})$</li>
-<li>$h_{hi}[n] = (-1)^n h_{lo}[n]$</li>
-</ul>
-</li>
-<li><p>Pasmowo-zaporowy to połączenie górno- i dolno-przepustowego:</p>
-<ul>
-<li>$H_{bs} = H_{lo} + H_{hi}$</li>
-<li>$h_{bs} = h_{lo} + h_{hi}$</li>
-</ul>
-</li>
-<li><p>Pasmowo-przepustowy to iloczyon górno- i dolno-prezpustowego:</p>
-<ul>
-<li>$H_{bs} = H_{lo} \cdot H_{hi}$</li>
-<li>$h_{bs} = h_{lo} * h_{hi}$</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Ograniczenia-w-projektowaniu-filtr&#243;w">Ograniczenia w projektowaniu filtr&#243;w<a class="anchor-link" href="#Ograniczenia-w-projektowaniu-filtr&#243;w">&#182;</a></h2><ul>
-<li>Odpowiedź częstotliowściowa</li>
-<li>Rodzaj filtru: SOI (FIR), NOI (IIR)</li>
-<li>Długość filtru</li>
-<li>Liniowa faza</li>
-<li>Przyczynowość</li>
-<li>Stabilny</li>
-<li>Ograniczenia:
-<img src="images/filter_design.png" alt=""></li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Czemu-nie-sinc?">Czemu nie sinc?<a class="anchor-link" href="#Czemu-nie-sinc?">&#182;</a></h2><ul>
-<li>Nieprzyczynowy</li>
-<li>Nieskończony</li>
-</ul>
-<p><img src="images/sinc.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Widmo-amplitudowe-vs-modu&#322;-widma">Widmo amplitudowe vs modu&#322; widma<a class="anchor-link" href="#Widmo-amplitudowe-vs-modu&#322;-widma">&#182;</a></h2><p><img src="images/amp_mag.png?1" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4-rodzaje-filtr&#243;w-SOI-(FIR)-z-liniow&#261;-faz&#261;">4 rodzaje filtr&#243;w SOI (FIR) z liniow&#261; faz&#261;<a class="anchor-link" href="#4-rodzaje-filtr&#243;w-SOI-(FIR)-z-liniow&#261;-faz&#261;">&#182;</a></h2><p><img src="images/linphase_fir.png?1" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Metody-projektowania-filtr&#243;w-SOI-(FIR)">Metody projektowania filtr&#243;w SOI (FIR)<a class="anchor-link" href="#Metody-projektowania-filtr&#243;w-SOI-(FIR)">&#182;</a></h2><h3 id="Metoda-pr&#243;bkowania-cz&#281;stotliwo&#347;ci">Metoda pr&#243;bkowania cz&#281;stotliwo&#347;ci<a class="anchor-link" href="#Metoda-pr&#243;bkowania-cz&#281;stotliwo&#347;ci">&#182;</a></h3><ol>
-<li>Wybieramy N </li>
-<li>Projektujemy filtr w dziedzinie częstotliwości</li>
-<li>Próbkujemy odpowiedź częstotliwościową N punktami</li>
-<li>Wykonujemy IDFT</li>
+<ol>
+<li>twardówka</li>
+<li>naczyniówka</li>
+<li>kanał Schlemma</li>
+<li>wyrostek rzęskowy</li>
+<li><strong>rogówka</strong></li>
+<li><strong>tęczówka</strong></li>
+<li><strong>źrenica</strong></li>
+<li>komora przednia oka</li>
+<li>komora tylna oka</li>
+<li>ciało rzęskowe  </li>
+<li><strong>soczewka</strong></li>
+<li>ciało szkliste</li>
+<li><strong>siatkówka</strong></li>
+<li><strong>nerw wzrokowy</strong></li>
+<li>więzadełko rzęskowe</li>
 </ol>
-<p><img src="images/sample_fir.png?1" alt=""></p>
 
 </div>
 </div>
@@ -12161,14 +12027,7 @@ H(z)=\frac{Y(z)}{X(z)}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Metoda-minimalizacji-b&#322;&#281;du-&#347;redniokwadratowego">Metoda minimalizacji b&#322;&#281;du &#347;redniokwadratowego<a class="anchor-link" href="#Metoda-minimalizacji-b&#322;&#281;du-&#347;redniokwadratowego">&#182;</a></h3><ol>
-<li>Wybieramy N</li>
-<li>Projektujemy filtr w dziedzinie częstotliwości</li>
-<li>Próbkukjemy odpowiedź częstotliwościową M &gt; N pukntami</li>
-<li>Wykonujemy IDFT</li>
-<li>Wybieramy N środkowych (wokól maksimum) wartości</li>
-</ol>
-<p><img src="images/leastsquares_fir.png" alt=""></p>
+<h2 id="Czopki-i-pr&#281;ciki">Czopki i pr&#281;ciki<a class="anchor-link" href="#Czopki-i-pr&#281;ciki">&#182;</a></h2><p><img src="images/czopki-preciki.png" alt=""></p>
 
 </div>
 </div>
@@ -12177,29 +12036,7 @@ H(z)=\frac{Y(z)}{X(z)}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Metoda-&quot;okienkowa&quot;">Metoda "okienkowa"<a class="anchor-link" href="#Metoda-&quot;okienkowa&quot;">&#182;</a></h3><ul>
-<li>Działa podobnie do poprzednich, ale współczynniki filtru są najpierw mnożone przez wybraną funkcję okienkową</li>
-</ul>
-<p><img src="images/window_fir.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zalety-filtr&#243;w-SOI-(FIR)">Zalety filtr&#243;w SOI (FIR)<a class="anchor-link" href="#Zalety-filtr&#243;w-SOI-(FIR)">&#182;</a></h2><ul>
-<li>Mogą mieć liniową fazę</li>
-<li>Wydajna implementacja</li>
-<li>Łatwe projektowanie</li>
-<li>Zawsze stabilne</li>
-</ul>
-<h2 id="Wady">Wady<a class="anchor-link" href="#Wady">&#182;</a></h2><ul>
-<li>Mogą wymagać dużo N</li>
-<li>Przez co mogą wymagać dużo operacji/pamięci do implementacji</li>
-<li>Przez co mogą wprowadzić duże opóźnienie sygnału</li>
-</ul>
+<p><img src="images/cones_rods.jpg" alt=""></p>
 
 </div>
 </div>
@@ -12208,14 +12045,28 @@ H(z)=\frac{Y(z)}{X(z)}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Filtry-NOI-(IIR)">Filtry NOI (IIR)<a class="anchor-link" href="#Filtry-NOI-(IIR)">&#182;</a></h2><h3 id="Zalety">Zalety<a class="anchor-link" href="#Zalety">&#182;</a></h3><ul>
-<li>Mogą realizować zadania zawierające o wiele bardziej skomplikowane wymagania</li>
-<li>Wymagają z reguły mniejszego N</li>
+<h2 id="Obraz-analogowy">Obraz analogowy<a class="anchor-link" href="#Obraz-analogowy">&#182;</a></h2><ul>
+<li>Film fotograficzny<ul>
+<li>światłoczułe kryształy soli srebra</li>
 </ul>
-<h3 id="Wady">Wady<a class="anchor-link" href="#Wady">&#182;</a></h3><ul>
-<li>Nie mają liniowej fazy</li>
-<li>Mogą być niestabilne</li>
-<li>Są nieco trudniejsze w projektowaniu i implementacji</li>
+</li>
+<li>Tarcza Nipkowa</li>
+<li>Telewizja analogowa</li>
+<li>Ekrany<ul>
+<li>CRT</li>
+<li>LCD</li>
+<li>Plasma</li>
+<li>LED</li>
+<li>mnóstwo innych...</li>
+</ul>
+</li>
+<li>Druk<ul>
+<li>Igłowy</li>
+<li>Termiczny</li>
+<li>Ink-jet</li>
+<li>Laserowy</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -12225,10 +12076,7 @@ H(z)=\frac{Y(z)}{X(z)}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Opis-filtru-NOI-(IIR)">Opis filtru NOI (IIR)<a class="anchor-link" href="#Opis-filtru-NOI-(IIR)">&#182;</a></h2><p>\begin{equation}
-y[n]=\sum_{m=0}^{M} b[m]x[n-m]-\sum_{k=1}^{N}a[k]y[n-k]
-\end{equation}</p>
-<p><img src="images/iir_block.png" alt=""></p>
+<h3 id="Telewizja-z-tarcz&#261;-Nipkowa">Telewizja z tarcz&#261; Nipkowa<a class="anchor-link" href="#Telewizja-z-tarcz&#261;-Nipkowa">&#182;</a></h3><p><img src="images/nipkow.jpg" alt=""></p>
 
 </div>
 </div>
@@ -12237,36 +12085,168 @@ y[n]=\sum_{m=0}^{M} b[m]x[n-m]-\sum_{k=1}^{N}a[k]y[n-k]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Transmitancja-filtru-NOI-(IIR)">Transmitancja filtru NOI (IIR)<a class="anchor-link" href="#Transmitancja-filtru-NOI-(IIR)">&#182;</a></h2><p>\begin{equation}
-H(z)=\sum_{n=0}^{\infty}h[n]z^{-n}
-\end{equation}</p>
+<p><img src="images/tv_transmission.png" style="height: 500px"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Kineskop-CRT">Kineskop CRT<a class="anchor-link" href="#Kineskop-CRT">&#182;</a></h3><p><img src="images/crt.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="images/color_pixel.jpg" style="height: 500px"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Obraz-cyfrowy">Obraz cyfrowy<a class="anchor-link" href="#Obraz-cyfrowy">&#182;</a></h2><ul>
+<li>piksel - <em>ang. picture element</em></li>
+<li>rozdzielczość<ul>
+<li>miara DPI/PPI (druk), megapiksele (ekran)</li>
+<li>subpixel rendering</li>
+<li>4:3, 3:2, 16:9</li>
+</ul>
+</li>
+<li>głębia bitowa (<em>ang. bit-depth</em>)</li>
+<li>kanały kolorów</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Przestrzenie-barw">Przestrzenie barw<a class="anchor-link" href="#Przestrzenie-barw">&#182;</a></h2><ul>
+<li>RGB</li>
+<li>CMYK</li>
+<li>HSV/HSL</li>
+<li>XYZ</li>
+<li>YUV</li>
+<li>...</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="RGB/CMYK">RGB/CMYK<a class="anchor-link" href="#RGB/CMYK">&#182;</a></h3><p><img src="images/RGBCube.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="HSV/HSL">HSV/HSL<a class="anchor-link" href="#HSV/HSL">&#182;</a></h3><ul>
+<li><a href="http://tinyurl.com/pjatk-grk">http://tinyurl.com/pjatk-grk</a> (Barwy i histogram)</li>
+</ul>
+<p><img src="images/hsv_hsl.png" style="height: 500px"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="CIE-XYZ">CIE XYZ<a class="anchor-link" href="#CIE-XYZ">&#182;</a></h3><p><img src="images/xyz.png" style="height: 500px"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="YUV">YUV<a class="anchor-link" href="#YUV">&#182;</a></h3><p><img src="images/YUV.svg" style="height: 500px;float:left">
+<img src="images/Barn-yuv.png" style="height: 500px;clear:none"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Arytmetyka-obrazu">Arytmetyka obrazu<a class="anchor-link" href="#Arytmetyka-obrazu">&#182;</a></h2><ul>
+<li>Dodawnie<ul>
+<li>np. rozjaśnianie obrazu, łącznie masek</li>
+</ul>
+</li>
+<li>Odejmowanie<ul>
+<li>np. szukanie różnic w obrazie</li>
+</ul>
+</li>
+<li>Mnożenie<ul>
+<li>np. stosowanie masek</li>
+</ul>
+</li>
+<li>Dzielenie<ul>
+<li>np. usuwanie poświaty używając obrazu pola światła</li>
+</ul>
+</li>
+<li>Łączenie (<em>ang. blending</em>)<ul>
+<li>np. uśrednianie</li>
+</ul>
+</li>
+<li>Binarne<ul>
+<li>AND, OR, NOT, XOR</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Histogram">Histogram<a class="anchor-link" href="#Histogram">&#182;</a></h2><p><img src="images/histograms.png" style="height: 500px"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Momenty-obrazu">Momenty obrazu<a class="anchor-link" href="#Momenty-obrazu">&#182;</a></h2><ul>
+<li>Moment obrazu względem punktu $c$ - zwykle $(0,0)$:</li>
+</ul>
 <p>\begin{equation}
-H(z)=\frac{\sum_{n=0}^{M}b[n]z^{-n}}{\sum_{n=0}^{N}a[n]z^{-n}}
-\end{equation}</p>
-<p>\begin{equation}
-H(z)=\frac{B(z)}{A(z)}
+\mu_{m,n} = \sum_{x=0}^{W}\sum_{y=0}^{H} (x-c_x)^m (y-c_y)^n f(x,y)
 \end{equation}</p>
 <ul>
-<li>Pierwiastki $B(z)$ odpowiadają zerom</li>
-<li>Pierwiastki $A(z)$ odpowiadają biegunom</li>
-<li>Dla przyczynowego filtru biguny muszą być wewnątrz okręgu jednostkowegu, czyli $|r|&lt;1$</li>
+<li>Powierzchnia binarnego obrazu: </li>
 </ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Parametry-optymalizacyjne-filtr&#243;w-NOI-(IIR)">Parametry optymalizacyjne filtr&#243;w NOI (IIR)<a class="anchor-link" href="#Parametry-optymalizacyjne-filtr&#243;w-NOI-(IIR)">&#182;</a></h2><ul>
-<li>Długość filtru N</li>
-<li>F_p,F_s krawędzie pasma przepustowego/zaporowego</li>
-<li>$\delta_1$ odchylenie pasma przepustowego (od 1)</li>
-<li>$\delta_2$ odchylenie pasma zaporowego (od 0)</li>
+<p>\begin{equation}
+\mu_{0,0}
+\end{equation}</p>
+<ul>
+<li>Centroid binarnego obrazu:</li>
 </ul>
-<h3 id="Minimalizacja-parametru-N">Minimalizacja parametru N<a class="anchor-link" href="#Minimalizacja-parametru-N">&#182;</a></h3><p>\begin{equation}
-N \approx \frac{-20\log_{10}\sqrt{\delta_1 \delta_2}-13}{14.6(F_s-F_p)}+1
+<p>\begin{equation}
+\left(\frac{\mu_{1,0}}{\mu_{0,0}},\frac{\mu_{0,1}}{\mu_{0,0}}\right)
 \end{equation}</p>
 
 </div>
@@ -12276,10 +12256,12 @@ N \approx \frac{-20\log_{10}\sqrt{\delta_1 \delta_2}-13}{14.6(F_s-F_p)}+1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Przyk&#322;adowe-algorytmy">Przyk&#322;adowe algorytmy<a class="anchor-link" href="#Przyk&#322;adowe-algorytmy">&#182;</a></h2><ul>
-<li>W praktyce projektowanie filtrów NOI (IIR) polega na zaprojektowaniu filtru analogowego i przeniesieniu go do dziedziny cyfrowej (Laplace $\rightarrow$ transformata Z)</li>
+<h2 id="Linki">Linki<a class="anchor-link" href="#Linki">&#182;</a></h2><ul>
+<li><a href="https://homepages.inf.ed.ac.uk/rbf/HIPR2/index.htm">https://homepages.inf.ed.ac.uk/rbf/HIPR2/index.htm</a></li>
+<li><a href="http://scikit-image.org/docs/dev/auto_examples/index.html">http://scikit-image.org/docs/dev/auto_examples/index.html</a></li>
+<li><a href="https://docs.opencv.org/master/d9/df8/tutorial_root.html">https://docs.opencv.org/master/d9/df8/tutorial_root.html</a></li>
+<li><a href="http://aishack.in/">http://aishack.in/</a></li>
 </ul>
-<p><img src="images/iir_design.png" alt=""></p>
 
 </div>
 </div>

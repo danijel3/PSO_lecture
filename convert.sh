@@ -7,3 +7,4 @@ jupyter nbconvert 4_Fourier.ipynb --to slides
 jupyter nbconvert 5_Próbkowanie.ipynb --to slides
 jupyter nbconvert 6_DFT.ipynb --to slides
 jupyter nbconvert 7_filtry.ipynb --to slides
+jupyter nbconvert 8_obrazy.ipynb --to slides
