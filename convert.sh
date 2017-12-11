@@ -8,3 +8,5 @@ jupyter nbconvert 5_Próbkowanie.ipynb --to slides
 jupyter nbconvert 6_DFT.ipynb --to slides
 jupyter nbconvert 7_filtry.ipynb --to slides
 jupyter nbconvert 8_obrazy.ipynb --to slides
+jupyter nbconvert 9_obrazy_punkt.ipynb --to slides
+jupyter nbconvert 10_obrazy_transformaty.ipynb --to slides
