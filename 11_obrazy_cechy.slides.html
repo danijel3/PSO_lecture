@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>7_filtry slides</title>
+<title>11_obrazy_cechy slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11905,7 +11905,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Filtry-cyfrowe">Filtry cyfrowe<a class="anchor-link" href="#Filtry-cyfrowe">&#182;</a></h1><h2 id="Projektowanie-i-cechy">Projektowanie i cechy<a class="anchor-link" href="#Projektowanie-i-cechy">&#182;</a></h2>
+<h1 id="Przetwarzanie-obraz&#243;w">Przetwarzanie obraz&#243;w<a class="anchor-link" href="#Przetwarzanie-obraz&#243;w">&#182;</a></h1><h2 id="Ekstracja-cech">Ekstracja cech<a class="anchor-link" href="#Ekstracja-cech">&#182;</a></h2>
 </div>
 </div>
 </div></section></section><section><section>
@@ -11913,246 +11913,13 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Transformata-Laplace'a">Transformata Laplace'a<a class="anchor-link" href="#Transformata-Laplace'a">&#182;</a></h1><p>\begin{equation}
-F(s)=\int_{-\infty}^{\infty} f(t)e^{-st}dt
-\end{equation}</p>
-<h2 id="Transformata-Fouriera">Transformata Fouriera<a class="anchor-link" href="#Transformata-Fouriera">&#182;</a></h2><p>\begin{equation}
-\hat{f}(\omega)=\int_{-\infty}^{\infty} f(t)e^{-i\omega t}dt
-\end{equation}</p>
-<ul>
-<li>Czyli:</li>
-</ul>
-<p>\begin{equation}
-s = i\omega
-\end{equation}</p>
-<ul>
-<li>Transformata Laplace'a służy do analizy sygnałów dla których $\hat{f}(t)$ nie istnieje</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Transformata-Z">Transformata Z<a class="anchor-link" href="#Transformata-Z">&#182;</a></h2><ul>
-<li>Dyskretna wersja transformaty Laplace'a:</li>
-</ul>
-<p>\begin{equation}
-X(z)=\sum_{n=-\infty}^{\infty}x[n]z^{-n}
-\end{equation}</p>
-<ul>
-<li>Porównując do DFT:</li>
-</ul>
-<p>\begin{equation}
-X(\omega)=\sum_{n=-\infty}^{\infty}x[n]e^{-i\omega n}
-\end{equation}</p>
-<ul>
-<li><p>O ile $\omega$ to rzeczywista częstotliwość sygnału, $z$ to liczba zespolona</p>
-</li>
-<li><p>Mówimy o płaściźnie zespolonej Z (ang. <em>Z plane</em>) gdzie wartość $z=e^{i\omega}$ to okrąg reprezentujący transformatę Fouriera</p>
-</li>
-<li><p>$X(\omega)$ istnieje jeśli $\sum \left|x[n]\right| &lt; \infty$</p>
-</li>
-<li>$X(z)$ można policzyć dla wielu innych sygnałów</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Obszar-zbie&#380;no&#347;ci">Obszar zbie&#380;no&#347;ci<a class="anchor-link" href="#Obszar-zbie&#380;no&#347;ci">&#182;</a></h2><h3 id="(ang.-region-of-convergence---ROC)">(ang. region-of-convergence - ROC)<a class="anchor-link" href="#(ang.-region-of-convergence---ROC)">&#182;</a></h3><ul>
-<li>$X(z)$ jest zbieżne w obszarze punktów, dla których:</li>
-</ul>
-<p>\begin{equation}
-z=\left|\sum_{n=-\infty}^{\infty}x[n]z^{-n}\right| &lt; \infty
-\end{equation}</p>
-<ul>
-<li>System jest stabilny jeśli okrąg jednostkowy (ang. <em>unit circle</em>) należy do ROC</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Obszar-zbie&#380;no&#347;ci">Obszar zbie&#380;no&#347;ci<a class="anchor-link" href="#Obszar-zbie&#380;no&#347;ci">&#182;</a></h2><h3 id="(ang.-region-of-convergence---ROC)">(ang. region-of-convergence - ROC)<a class="anchor-link" href="#(ang.-region-of-convergence---ROC)">&#182;</a></h3><ul>
-<li>W zasadzie mamy do czynienia z następującymy ROC:</li>
-</ul>
-<p><img src="images/roc_types.png?1" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zera-i-bieguny">Zera i bieguny<a class="anchor-link" href="#Zera-i-bieguny">&#182;</a></h2><ul>
-<li><p>Szególnie nas interesują miejsca w płaściźnie Z w których $|z|=0$ oraz $|z|=\infty$</p>
-</li>
-<li><p>Zera zaznaczamy kółkami, a bieguny krzyżykami, np:</p>
-</li>
-</ul>
-<p><img src="images/polezero.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zasady">Zasady<a class="anchor-link" href="#Zasady">&#182;</a></h2><ul>
-<li><p>ROC to koło albo pierścień ze środkiem w $(0+0i)$</p>
-</li>
-<li><p>ROC nigdy nie zawiera biegunów!</p>
-</li>
-<li><p>Dla skończonego $x[n]$, ROC to cała przestrzeń $Z$ z możliwym wyjątkiem dla $z=0$ lub $z=\infty$</p>
-</li>
-</ul>
-<p><img src="images/roc_types2.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Transmitancja">Transmitancja<a class="anchor-link" href="#Transmitancja">&#182;</a></h2><p>\begin{equation}
-y[n]=x[n]*h[n]
-\end{equation}</p>
-<p>\begin{equation}
-Y(z) = H(z)X(z)
-\end{equation}</p>
-<p>\begin{equation}
-H(z)=\frac{Y(z)}{X(z)}
-\end{equation}</p>
-<p>\begin{equation}
-\left|Y(z)\right| = \left|H(z)\right| \cdot \left|X(z)\right|
-\end{equation}</p>
-<p>\begin{equation}
-\angle Y(z) = \angle H(z) + \angle X(z)
-\end{equation}</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Rodzaje-filtr&#243;w">Rodzaje filtr&#243;w<a class="anchor-link" href="#Rodzaje-filtr&#243;w">&#182;</a></h1><p><img src="images/filter_types.png" style="height:500px"></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zagadka?">Zagadka?<a class="anchor-link" href="#Zagadka?">&#182;</a></h2><p><img src="images/pole_zero_filters.jpg" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>Zazwyczaj projektujemy dolno-przepustowe filtry</p>
-</li>
-<li><p>Górno-przepustowy można zaprojektować odejmując dolno-przepustowy od 1:</p>
-<ul>
-<li>$H_{hi}(z)=1-H_{lo}(z)=H_{lo}(e^{j\omega-\pi})$</li>
-<li>$h_{hi}[n] = (-1)^n h_{lo}[n]$</li>
-</ul>
-</li>
-<li><p>Pasmowo-zaporowy to połączenie górno- i dolno-przepustowego:</p>
-<ul>
-<li>$H_{bs} = H_{lo} + H_{hi}$</li>
-<li>$h_{bs} = h_{lo} + h_{hi}$</li>
-</ul>
-</li>
-<li><p>Pasmowo-przepustowy to iloczyon górno- i dolno-prezpustowego:</p>
-<ul>
-<li>$H_{bs} = H_{lo} \cdot H_{hi}$</li>
-<li>$h_{bs} = h_{lo} * h_{hi}$</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Ograniczenia-w-projektowaniu-filtr&#243;w">Ograniczenia w projektowaniu filtr&#243;w<a class="anchor-link" href="#Ograniczenia-w-projektowaniu-filtr&#243;w">&#182;</a></h2><ul>
-<li>Odpowiedź częstotliowściowa</li>
-<li>Rodzaj filtru: SOI (FIR), NOI (IIR)</li>
-<li>Długość filtru</li>
-<li>Liniowa faza</li>
-<li>Przyczynowość</li>
-<li>Stabilny</li>
-<li>Ograniczenia:
-<img src="images/filter_design.png" alt=""></li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Czemu-nie-sinc?">Czemu nie sinc?<a class="anchor-link" href="#Czemu-nie-sinc?">&#182;</a></h2><ul>
-<li>Nieprzyczynowy</li>
-<li>Nieskończony</li>
-</ul>
-<p><img src="images/sinc.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Widmo-amplitudowe-vs-modu&#322;-widma">Widmo amplitudowe vs modu&#322; widma<a class="anchor-link" href="#Widmo-amplitudowe-vs-modu&#322;-widma">&#182;</a></h2><p><img src="images/amp_mag.png?1" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4-rodzaje-filtr&#243;w-SOI-(FIR)-z-liniow&#261;-faz&#261;">4 rodzaje filtr&#243;w SOI (FIR) z liniow&#261; faz&#261;<a class="anchor-link" href="#4-rodzaje-filtr&#243;w-SOI-(FIR)-z-liniow&#261;-faz&#261;">&#182;</a></h2><p><img src="images/linphase_fir.png?1" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Metody-projektowania-filtr&#243;w-SOI-(FIR)">Metody projektowania filtr&#243;w SOI (FIR)<a class="anchor-link" href="#Metody-projektowania-filtr&#243;w-SOI-(FIR)">&#182;</a></h2><h3 id="Metoda-pr&#243;bkowania-cz&#281;stotliwo&#347;ci">Metoda pr&#243;bkowania cz&#281;stotliwo&#347;ci<a class="anchor-link" href="#Metoda-pr&#243;bkowania-cz&#281;stotliwo&#347;ci">&#182;</a></h3><ol>
-<li>Wybieramy N </li>
-<li>Projektujemy filtr w dziedzinie częstotliwości</li>
-<li>Próbkujemy odpowiedź częstotliwościową N punktami</li>
-<li>Wykonujemy IDFT</li>
+<h2 id="JPEG">JPEG<a class="anchor-link" href="#JPEG">&#182;</a></h2><ol>
+<li>Konwersja RGB $\rightarrow$ YCrCb i sub-sampling (4:4:4, 4:2:2 albo 4:2:0)</li>
+<li>Podział na bloki 8x8</li>
+<li>DCT każedgo bloku</li>
+<li>Kwantyzacja</li>
+<li>Kodowanie bezstratne (RLE, Huffman)</li>
 </ol>
-<p><img src="images/sample_fir.png?2" alt=""></p>
 
 </div>
 </div>
@@ -12161,14 +11928,299 @@ H(z)=\frac{Y(z)}{X(z)}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Metoda-minimalizacji-b&#322;&#281;du-&#347;redniokwadratowego">Metoda minimalizacji b&#322;&#281;du &#347;redniokwadratowego<a class="anchor-link" href="#Metoda-minimalizacji-b&#322;&#281;du-&#347;redniokwadratowego">&#182;</a></h3><ol>
-<li>Wybieramy N</li>
-<li>Projektujemy filtr w dziedzinie częstotliwości</li>
-<li>Próbkukjemy odpowiedź częstotliwościową M &gt; N pukntami</li>
-<li>Wykonujemy IDFT</li>
-<li>Wybieramy N środkowych (wokól maksimum) wartości</li>
+<h4 id="Macierz-kwantyzacji-dla-q=50">Macierz kwantyzacji dla q=50<a class="anchor-link" href="#Macierz-kwantyzacji-dla-q=50">&#182;</a></h4><p><img src="images/jpg_quant.svg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Wynik-kwantyzacji-DCT-przyk&#322;adowego-zdj&#281;cia">Wynik kwantyzacji DCT przyk&#322;adowego zdj&#281;cia<a class="anchor-link" href="#Wynik-kwantyzacji-DCT-przyk&#322;adowego-zdj&#281;cia">&#182;</a></h4><p><img src="images/jpg_quant2.svg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Schemat-&quot;zig-zag&quot;-do-szeregowania-warto&#347;ci-przed-kodowaniem-bezstratnym">Schemat "zig-zag" do szeregowania warto&#347;ci przed kodowaniem bezstratnym<a class="anchor-link" href="#Schemat-&quot;zig-zag&quot;-do-szeregowania-warto&#347;ci-przed-kodowaniem-bezstratnym">&#182;</a></h4><p><img src="images/JPEG_ZigZag.svg" style="width:300px"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Filtry-splotowe">Filtry splotowe<a class="anchor-link" href="#Filtry-splotowe">&#182;</a></h2><h4 id="S&#243;l-i-pieprz">S&#243;l i pieprz<a class="anchor-link" href="#S&#243;l-i-pieprz">&#182;</a></h4><p><img src="images/pepper_salt.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Filtr-u&#347;redniaj&#261;cy">Filtr u&#347;redniaj&#261;cy<a class="anchor-link" href="#Filtr-u&#347;redniaj&#261;cy">&#182;</a></h4><p><img src="images/pepper_mean.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Filtr-Gaussowski">Filtr Gaussowski<a class="anchor-link" href="#Filtr-Gaussowski">&#182;</a></h4><p><img src="images/pepper_gauss.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Filtr-medianowy">Filtr medianowy<a class="anchor-link" href="#Filtr-medianowy">&#182;</a></h3><p><img src="images/pepper_median.png" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Operatory-morfologiczne">Operatory morfologiczne<a class="anchor-link" href="#Operatory-morfologiczne">&#182;</a></h2><h4 id="Dylatacja">Dylatacja<a class="anchor-link" href="#Dylatacja">&#182;</a></h4><p><img src="images/dilation.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Erozja">Erozja<a class="anchor-link" href="#Erozja">&#182;</a></h4><p><img src="images/erosion.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Dylatacja-obrazu-&quot;s&#243;l&quot;">Dylatacja obrazu "s&#243;l"<a class="anchor-link" href="#Dylatacja-obrazu-&quot;s&#243;l&quot;">&#182;</a></h4><p><img src="images/astronaut_dilate.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Erozja-obrazu-&quot;s&#243;l&quot;">Erozja obrazu "s&#243;l"<a class="anchor-link" href="#Erozja-obrazu-&quot;s&#243;l&quot;">&#182;</a></h4><p><img src="images/astronaut_erode.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Otwarcie">Otwarcie<a class="anchor-link" href="#Otwarcie">&#182;</a></h4><p><img src="images/astronaut_open.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Zamkni&#281;cie">Zamkni&#281;cie<a class="anchor-link" href="#Zamkni&#281;cie">&#182;</a></h4><p><img src="images/astronaut_close.png" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Transformata-Hougha">Transformata Hougha<a class="anchor-link" href="#Transformata-Hougha">&#182;</a></h2><p><img src="images/hough_simple.png?1" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Transformata-Hougha-obrazu-naturalnego">Transformata Hougha obrazu naturalnego<a class="anchor-link" href="#Transformata-Hougha-obrazu-naturalnego">&#182;</a></h4><p><img src="images/hough_camera.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Maksima-transformaty-Houhgha-jako-linie">Maksima transformaty Houhgha jako linie<a class="anchor-link" href="#Maksima-transformaty-Houhgha-jako-linie">&#182;</a></h4><p><img src="images/hough_lines.png" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Detekcja-rog&#243;w-Harris'a">Detekcja rog&#243;w Harris'a<a class="anchor-link" href="#Detekcja-rog&#243;w-Harris'a">&#182;</a></h2><p>(1988)</p>
+<p>\begin{equation}
+E(u,v)=\sum_{x,y} \underbrace{w(x,y)}_{\text{window}} [\underbrace{I(x+u,y+v)}_{\text{shifted intensity}} - \underbrace{I(x,y)}_{\text{intensity}}]^2
+\end{equation}</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Intuicja-wzoru">Intuicja wzoru<a class="anchor-link" href="#Intuicja-wzoru">&#182;</a></h4><p><img src="images/harris.png" style="width:500px"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Na-podstawie-rozwini&#281;cia-szeregu-Taylora">Na podstawie rozwini&#281;cia szeregu Taylora<a class="anchor-link" href="#Na-podstawie-rozwini&#281;cia-szeregu-Taylora">&#182;</a></h4><p>\begin{equation}
+E(u,v)\cong
+\begin{bmatrix}
+u &amp; v
+\end{bmatrix}
+M
+\begin{bmatrix}
+u \\ v
+\end{bmatrix}
+\end{equation}</p>
+<p>\begin{equation}
+M=\sum_{x,y} w(x,y) 
+\begin{bmatrix}
+I^2_x &amp; I_xI_y \\
+I_xI_y &amp; I^2_y
+\end{bmatrix}
+\end{equation}</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Warto&#347;ci--w&#322;asne-(eigenvalues)">Warto&#347;ci  w&#322;asne (eigenvalues)<a class="anchor-link" href="#Warto&#347;ci--w&#322;asne-(eigenvalues)">&#182;</a></h4><p><img src="images/harris2.png?1" style="width:500px"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Miara-odpowiedzi-rog&#243;w">Miara odpowiedzi rog&#243;w<a class="anchor-link" href="#Miara-odpowiedzi-rog&#243;w">&#182;</a></h4><p>\begin{equation}
+R=\det M - k (\text{trace } M)^2
+\end{equation}</p>
+<p>\begin{equation}
+\det M = \lambda_1\lambda_2 \\
+\text{trace } M = \lambda_1 + \lambda_2
+\end{equation}</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Przyk&#322;ad-odpowiedzi-na-zdj&#281;ciu">Przyk&#322;ad odpowiedzi na zdj&#281;ciu<a class="anchor-link" href="#Przyk&#322;ad-odpowiedzi-na-zdj&#281;ciu">&#182;</a></h4><p><img src="images/checker_harris.png" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Opeartor-Laplace'a">Opeartor Laplace'a<a class="anchor-link" href="#Opeartor-Laplace'a">&#182;</a></h2><p>\begin{equation}
+L(x,y)=\frac{\partial^2I}{\partial x^2} + \frac{\partial^2I}{\partial y^2}
+\end{equation}</p>
+<p><img src="images/derivs.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Przyk&#322;ad-transformaty-na-zdj&#281;ciu">Przyk&#322;ad transformaty na zdj&#281;ciu<a class="anchor-link" href="#Przyk&#322;ad-transformaty-na-zdj&#281;ciu">&#182;</a></h4><p><img src="images/laplacian.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Progowanie-transformaty">Progowanie transformaty<a class="anchor-link" href="#Progowanie-transformaty">&#182;</a></h4><p><img src="images/laplacian2.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Laplacian-of-Gaussian">Laplacian of Gaussian<a class="anchor-link" href="#Laplacian-of-Gaussian">&#182;</a></h3><p>\begin{equation}
+LoG(x,y)=-\frac{1}{\pi\sigma^4}\left[1-\frac{x^2+y^2}{2\sigma^2}\right]e^{\left[-\frac{x^2+y^2}{2\sigma^2}\right]}
+\end{equation}</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="R&#243;&#380;ne-warto&#347;ci-$\sigma$">R&#243;&#380;ne warto&#347;ci $\sigma$<a class="anchor-link" href="#R&#243;&#380;ne-warto&#347;ci-$\sigma$">&#182;</a></h4><p><img src="images/log1.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Aproksymacje">Aproksymacje<a class="anchor-link" href="#Aproksymacje">&#182;</a></h4><p><img src="images/log_dog.png" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="SIFT">SIFT<a class="anchor-link" href="#SIFT">&#182;</a></h2><p>Scale-Invariant Feature Transform (2004)</p>
+<ol>
+<li>Detekcja ekstremów w piramidzie DoG dla różnych $\sigma$</li>
+<li>Doprecyzowanie lokalizacji puntków kluczowych</li>
+<li>Określenie orientacji na podstawie gradientu</li>
+<li>Zdefiniowanie deskryptora<ul>
+<li>blok 16x16 podzielony na 16 bloków 4x4, dla każdego 8-przedziałowy histogram orientacji</li>
+<li>w sumie 128 różnych wartości w deskryptorze</li>
+</ul>
+</li>
 </ol>
-<p><img src="images/leastsquares_fir.png?2" alt=""></p>
 
 </div>
 </div>
@@ -12177,10 +12229,7 @@ H(z)=\frac{Y(z)}{X(z)}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Metoda-&quot;okienkowa&quot;">Metoda "okienkowa"<a class="anchor-link" href="#Metoda-&quot;okienkowa&quot;">&#182;</a></h3><ul>
-<li>Działa podobnie do poprzednich, ale współczynniki filtru są najpierw mnożone przez wybraną funkcję okienkową</li>
-</ul>
-<p><img src="images/window_fir.png?2" alt=""></p>
+<h4 id="Liczenie-DoG">Liczenie DoG<a class="anchor-link" href="#Liczenie-DoG">&#182;</a></h4><p><img src="images/sift_dog.jpg" alt=""></p>
 
 </div>
 </div>
@@ -12189,16 +12238,21 @@ H(z)=\frac{Y(z)}{X(z)}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zalety-filtr&#243;w-SOI-(FIR)">Zalety filtr&#243;w SOI (FIR)<a class="anchor-link" href="#Zalety-filtr&#243;w-SOI-(FIR)">&#182;</a></h2><ul>
-<li>Mogą mieć liniową fazę</li>
-<li>Wydajna implementacja</li>
-<li>Łatwe projektowanie</li>
-<li>Zawsze stabilne</li>
-</ul>
-<h2 id="Wady">Wady<a class="anchor-link" href="#Wady">&#182;</a></h2><ul>
-<li>Mogą wymagać dużo N</li>
-<li>Przez co mogą wymagać dużo operacji/pamięci do implementacji</li>
-<li>Przez co mogą wprowadzić duże opóźnienie sygnału</li>
+<h4 id="Punkty-kluczowe-na-przyk&#322;adowym-zdj&#281;ciu">Punkty kluczowe na przyk&#322;adowym zdj&#281;ciu<a class="anchor-link" href="#Punkty-kluczowe-na-przyk&#322;adowym-zdj&#281;ciu">&#182;</a></h4><p><img src="images/sift_keypoints.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Inne-metody">Inne metody<a class="anchor-link" href="#Inne-metody">&#182;</a></h3><ul>
+<li>SURF - Speeded-Up Robust Features (2006)</li>
+<li>FAST - Features from Accelerated Segment Test (2006, 2010)</li>
+<li>CenSuRe/STAR - Center Surround Extremas (2008)</li>
+<li>BRIEF - Binary Robust Independent Elementary Features (2010)</li>
+<li>ORB - Oriented FAST and Rotated BRIEF (2011)</li>
 </ul>
 
 </div>
@@ -12208,15 +12262,7 @@ H(z)=\frac{Y(z)}{X(z)}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Filtry-NOI-(IIR)">Filtry NOI (IIR)<a class="anchor-link" href="#Filtry-NOI-(IIR)">&#182;</a></h2><h3 id="Zalety">Zalety<a class="anchor-link" href="#Zalety">&#182;</a></h3><ul>
-<li>Mogą realizować zadania zawierające o wiele bardziej skomplikowane wymagania</li>
-<li>Wymagają z reguły mniejszego N</li>
-</ul>
-<h3 id="Wady">Wady<a class="anchor-link" href="#Wady">&#182;</a></h3><ul>
-<li>Nie mają liniowej fazy</li>
-<li>Mogą być niestabilne</li>
-<li>Są nieco trudniejsze w projektowaniu i implementacji</li>
-</ul>
+<h2 id="G&#322;&#281;bokie-siecie-neuronowe">G&#322;&#281;bokie siecie neuronowe<a class="anchor-link" href="#G&#322;&#281;bokie-siecie-neuronowe">&#182;</a></h2><p><img src="images/hierarchical_features.png" alt=""></p>
 
 </div>
 </div>
@@ -12225,10 +12271,7 @@ H(z)=\frac{Y(z)}{X(z)}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Opis-filtru-NOI-(IIR)">Opis filtru NOI (IIR)<a class="anchor-link" href="#Opis-filtru-NOI-(IIR)">&#182;</a></h2><p>\begin{equation}
-y[n]=\sum_{m=0}^{M} b[m]x[n-m]-\sum_{k=1}^{N}a[k]y[n-k]
-\end{equation}</p>
-<p><img src="images/iir_block.png" alt=""></p>
+<h4 id="Autoenkoder">Autoenkoder<a class="anchor-link" href="#Autoenkoder">&#182;</a></h4><p><img src="images/autoencoder.png" alt=""></p>
 
 </div>
 </div>
@@ -12237,20 +12280,8 @@ y[n]=\sum_{m=0}^{M} b[m]x[n-m]-\sum_{k=1}^{N}a[k]y[n-k]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Transmitancja-filtru-NOI-(IIR)">Transmitancja filtru NOI (IIR)<a class="anchor-link" href="#Transmitancja-filtru-NOI-(IIR)">&#182;</a></h2><p>\begin{equation}
-H(z)=\sum_{n=0}^{\infty}h[n]z^{-n}
-\end{equation}</p>
-<p>\begin{equation}
-H(z)=\frac{\sum_{n=0}^{M}b[n]z^{-n}}{\sum_{n=0}^{N}a[n]z^{-n}}
-\end{equation}</p>
-<p>\begin{equation}
-H(z)=\frac{B(z)}{A(z)}
-\end{equation}</p>
-<ul>
-<li>Pierwiastki $B(z)$ odpowiadają zerom</li>
-<li>Pierwiastki $A(z)$ odpowiadają biegunom</li>
-<li>Dla przyczynowego filtru biguny muszą być wewnątrz okręgu jednostkowegu, czyli $|r|&lt;1$</li>
-</ul>
+<h4 id="Przyk&#322;ad-dzia&#322;ania-autoenkodera-na-bazie-zdj&#281;&#263;-MNIST">Przyk&#322;ad dzia&#322;ania autoenkodera na bazie zdj&#281;&#263; MNIST<a class="anchor-link" href="#Przyk&#322;ad-dzia&#322;ania-autoenkodera-na-bazie-zdj&#281;&#263;-MNIST">&#182;</a></h4><p><img src="images/ae_minst.jpg" alt=""></p>
+<p><a href="https://www.youtube.com/watch?v=pM68et1o3Zk">Youtube</a></p>
 
 </div>
 </div>
@@ -12259,27 +12290,7 @@ H(z)=\frac{B(z)}{A(z)}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Parametry-optymalizacyjne-filtr&#243;w-NOI-(IIR)">Parametry optymalizacyjne filtr&#243;w NOI (IIR)<a class="anchor-link" href="#Parametry-optymalizacyjne-filtr&#243;w-NOI-(IIR)">&#182;</a></h2><ul>
-<li>Długość filtru N</li>
-<li>F_p,F_s krawędzie pasma przepustowego/zaporowego</li>
-<li>$\delta_1$ odchylenie pasma przepustowego (od 1)</li>
-<li>$\delta_2$ odchylenie pasma zaporowego (od 0)</li>
-</ul>
-<h3 id="Minimalizacja-parametru-N">Minimalizacja parametru N<a class="anchor-link" href="#Minimalizacja-parametru-N">&#182;</a></h3><p>\begin{equation}
-N \approx \frac{-20\log_{10}\sqrt{\delta_1 \delta_2}-13}{14.6(F_s-F_p)}+1
-\end{equation}</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Przyk&#322;adowe-algorytmy">Przyk&#322;adowe algorytmy<a class="anchor-link" href="#Przyk&#322;adowe-algorytmy">&#182;</a></h2><ul>
-<li>W praktyce projektowanie filtrów NOI (IIR) polega na zaprojektowaniu filtru analogowego i przeniesieniu go do dziedziny cyfrowej (Laplace $\rightarrow$ transformata Z)</li>
-</ul>
-<p><img src="images/iir_design.png" alt=""></p>
+<h3 id="Transfer-learning">Transfer learning<a class="anchor-link" href="#Transfer-learning">&#182;</a></h3><p><img src="images/imagenet_vgg16.png" alt=""></p>
 
 </div>
 </div>
