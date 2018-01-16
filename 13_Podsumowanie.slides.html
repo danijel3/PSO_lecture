@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>11_obrazy_cechy slides</title>
+<title>13_Podsumowanie slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11905,22 +11905,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Przetwarzanie-obraz&#243;w">Przetwarzanie obraz&#243;w<a class="anchor-link" href="#Przetwarzanie-obraz&#243;w">&#182;</a></h1><h2 id="Ekstracja-cech">Ekstracja cech<a class="anchor-link" href="#Ekstracja-cech">&#182;</a></h2>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="JPEG">JPEG<a class="anchor-link" href="#JPEG">&#182;</a></h2><ol>
-<li>Konwersja RGB $\rightarrow$ YCrCb i sub-sampling (4:4:4, 4:2:2 albo 4:2:0)</li>
-<li>Podział na bloki 8x8</li>
-<li>DCT każedgo bloku</li>
-<li>Kwantyzacja</li>
-<li>Kodowanie bezstratne (RLE, Huffman)</li>
-</ol>
-
+<h1 id="Film">Film<a class="anchor-link" href="#Film">&#182;</a></h1>
 </div>
 </div>
 </div></section><section>
@@ -11928,299 +11913,25 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Macierz-kwantyzacji-dla-q=50">Macierz kwantyzacji dla q=50<a class="anchor-link" href="#Macierz-kwantyzacji-dla-q=50">&#182;</a></h4><p><img src="images/jpg_quant.svg" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Wynik-kwantyzacji-DCT-przyk&#322;adowego-zdj&#281;cia">Wynik kwantyzacji DCT przyk&#322;adowego zdj&#281;cia<a class="anchor-link" href="#Wynik-kwantyzacji-DCT-przyk&#322;adowego-zdj&#281;cia">&#182;</a></h4><p><img src="images/jpg_quant2.svg" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Schemat-&quot;zig-zag&quot;-do-szeregowania-warto&#347;ci-przed-kodowaniem-bezstratnym">Schemat "zig-zag" do szeregowania warto&#347;ci przed kodowaniem bezstratnym<a class="anchor-link" href="#Schemat-&quot;zig-zag&quot;-do-szeregowania-warto&#347;ci-przed-kodowaniem-bezstratnym">&#182;</a></h4><p><img src="images/JPEG_ZigZag.svg" style="width:300px"></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Filtry-splotowe">Filtry splotowe<a class="anchor-link" href="#Filtry-splotowe">&#182;</a></h2><h4 id="S&#243;l-i-pieprz">S&#243;l i pieprz<a class="anchor-link" href="#S&#243;l-i-pieprz">&#182;</a></h4><p><img src="images/pepper_salt.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Filtr-u&#347;redniaj&#261;cy">Filtr u&#347;redniaj&#261;cy<a class="anchor-link" href="#Filtr-u&#347;redniaj&#261;cy">&#182;</a></h4><p><img src="images/pepper_mean.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Filtr-Gaussowski">Filtr Gaussowski<a class="anchor-link" href="#Filtr-Gaussowski">&#182;</a></h4><p><img src="images/pepper_gauss.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Filtr-medianowy">Filtr medianowy<a class="anchor-link" href="#Filtr-medianowy">&#182;</a></h3><p><img src="images/pepper_median.png" alt=""></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Operatory-morfologiczne">Operatory morfologiczne<a class="anchor-link" href="#Operatory-morfologiczne">&#182;</a></h2><h4 id="Dylatacja">Dylatacja<a class="anchor-link" href="#Dylatacja">&#182;</a></h4><p><img src="images/dilation.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Erozja">Erozja<a class="anchor-link" href="#Erozja">&#182;</a></h4><p><img src="images/erosion.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Dylatacja-obrazu-&quot;s&#243;l&quot;">Dylatacja obrazu "s&#243;l"<a class="anchor-link" href="#Dylatacja-obrazu-&quot;s&#243;l&quot;">&#182;</a></h4><p><img src="images/astronaut_dilate.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Erozja-obrazu-&quot;s&#243;l&quot;">Erozja obrazu "s&#243;l"<a class="anchor-link" href="#Erozja-obrazu-&quot;s&#243;l&quot;">&#182;</a></h4><p><img src="images/astronaut_erode.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Otwarcie">Otwarcie<a class="anchor-link" href="#Otwarcie">&#182;</a></h4><p><img src="images/astronaut_open.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Zamkni&#281;cie">Zamkni&#281;cie<a class="anchor-link" href="#Zamkni&#281;cie">&#182;</a></h4><p><img src="images/astronaut_close.png" alt=""></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Transformata-Hougha">Transformata Hougha<a class="anchor-link" href="#Transformata-Hougha">&#182;</a></h2><p><img src="images/hough_simple.png?1" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Transformata-Hougha-obrazu-naturalnego">Transformata Hougha obrazu naturalnego<a class="anchor-link" href="#Transformata-Hougha-obrazu-naturalnego">&#182;</a></h4><p><img src="images/hough_camera.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Maksima-transformaty-Houhgha-jako-linie">Maksima transformaty Houhgha jako linie<a class="anchor-link" href="#Maksima-transformaty-Houhgha-jako-linie">&#182;</a></h4><p><img src="images/hough_lines.png" alt=""></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Detekcja-rog&#243;w-Harris'a">Detekcja rog&#243;w Harris'a<a class="anchor-link" href="#Detekcja-rog&#243;w-Harris'a">&#182;</a></h2><p>(1988)</p>
-<p>\begin{equation}
-E(u,v)=\sum_{x,y} \underbrace{w(x,y)}_{\text{window}} [\underbrace{I(x+u,y+v)}_{\text{shifted intensity}} - \underbrace{I(x,y)}_{\text{intensity}}]^2
-\end{equation}</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Intuicja-wzoru">Intuicja wzoru<a class="anchor-link" href="#Intuicja-wzoru">&#182;</a></h4><p><img src="images/harris.png" style="width:500px"></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Na-podstawie-rozwini&#281;cia-szeregu-Taylora">Na podstawie rozwini&#281;cia szeregu Taylora<a class="anchor-link" href="#Na-podstawie-rozwini&#281;cia-szeregu-Taylora">&#182;</a></h4><p>\begin{equation}
-E(u,v)\cong
-\begin{bmatrix}
-u &amp; v
-\end{bmatrix}
-M
-\begin{bmatrix}
-u \\ v
-\end{bmatrix}
-\end{equation}</p>
-<p>\begin{equation}
-M=\sum_{x,y} w(x,y) 
-\begin{bmatrix}
-I^2_x &amp; I_xI_y \\
-I_xI_y &amp; I^2_y
-\end{bmatrix}
-\end{equation}</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Warto&#347;ci--w&#322;asne-(eigenvalues)">Warto&#347;ci  w&#322;asne (eigenvalues)<a class="anchor-link" href="#Warto&#347;ci--w&#322;asne-(eigenvalues)">&#182;</a></h4><p><img src="images/harris2.png?1" style="width:500px"></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Miara-odpowiedzi-rog&#243;w">Miara odpowiedzi rog&#243;w<a class="anchor-link" href="#Miara-odpowiedzi-rog&#243;w">&#182;</a></h4><p>\begin{equation}
-R=\det M - k (\text{trace } M)^2
-\end{equation}</p>
-<p>\begin{equation}
-\det M = \lambda_1\lambda_2 \\
-\text{trace } M = \lambda_1 + \lambda_2
-\end{equation}</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Przyk&#322;ad-odpowiedzi-na-zdj&#281;ciu">Przyk&#322;ad odpowiedzi na zdj&#281;ciu<a class="anchor-link" href="#Przyk&#322;ad-odpowiedzi-na-zdj&#281;ciu">&#182;</a></h4><p><img src="images/checker_harris.png" alt=""></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Opeartor-Laplace'a">Opeartor Laplace'a<a class="anchor-link" href="#Opeartor-Laplace'a">&#182;</a></h2><p>\begin{equation}
-L(x,y)=\frac{\partial^2I}{\partial x^2} + \frac{\partial^2I}{\partial y^2}
-\end{equation}</p>
-<p><img src="images/derivs.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Przyk&#322;ad-transformaty-na-zdj&#281;ciu">Przyk&#322;ad transformaty na zdj&#281;ciu<a class="anchor-link" href="#Przyk&#322;ad-transformaty-na-zdj&#281;ciu">&#182;</a></h4><p><img src="images/laplacian.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Progowanie-transformaty">Progowanie transformaty<a class="anchor-link" href="#Progowanie-transformaty">&#182;</a></h4><p><img src="images/laplacian2.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Laplacian-of-Gaussian">Laplacian of Gaussian<a class="anchor-link" href="#Laplacian-of-Gaussian">&#182;</a></h3><p>\begin{equation}
-LoG(x,y)=-\frac{1}{\pi\sigma^4}\left[1-\frac{x^2+y^2}{2\sigma^2}\right]e^{\left[-\frac{x^2+y^2}{2\sigma^2}\right]}
-\end{equation}</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="R&#243;&#380;ne-warto&#347;ci-$\sigma$">R&#243;&#380;ne warto&#347;ci $\sigma$<a class="anchor-link" href="#R&#243;&#380;ne-warto&#347;ci-$\sigma$">&#182;</a></h4><p><img src="images/log1.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Aproksymacje">Aproksymacje<a class="anchor-link" href="#Aproksymacje">&#182;</a></h4><p><img src="images/log_dog.png" alt=""></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="SIFT">SIFT<a class="anchor-link" href="#SIFT">&#182;</a></h2><p>Scale-Invariant Feature Transform (2004)</p>
-<ol>
-<li>Detekcja ekstremów w piramidzie DoG dla różnych $\sigma$</li>
-<li>Doprecyzowanie lokalizacji puntków kluczowych</li>
-<li>Określenie orientacji na podstawie gradientu</li>
-<li>Zdefiniowanie deskryptora<ul>
-<li>blok 16x16 podzielony na 16 bloków 4x4, dla każdego 8-przedziałowy histogram orientacji</li>
-<li>w sumie 128 różnych wartości w deskryptorze</li>
+<h2 id="Wprowadznie">Wprowadznie<a class="anchor-link" href="#Wprowadznie">&#182;</a></h2><ul>
+<li>Bezwładność oka ludzkiego<ul>
+<li><a href="https://en.wikipedia.org/wiki/Zoetrope">Zoetrope</a></li>
 </ul>
 </li>
+<li>Historia<ul>
+<li><a href="https://en.wikipedia.org/wiki/Magic_lantern">"Magiczna latarnia" Huygensa</a> (XVII w.)</li>
+<li>Bracia Lumière (XIX w.) - pierwszy film 1895 r.</li>
+</ul>
+</li>
+<li>Algorytm:<ol>
+<li>Otwórz migawkę na krótki czas $t_0$</li>
+<li>Wyświetl/nagraj zdjęcie</li>
+<li>Zamknij migwakę po upłynięciu czasu $t_0$</li>
+<li>Przesuń taśmę o jedną klatkę</li>
+<li>Powróć do punktu 1.</li>
 </ol>
+</li>
+</ul>
 
 </div>
 </div>
@@ -12229,7 +11940,10 @@ LoG(x,y)=-\frac{1}{\pi\sigma^4}\left[1-\frac{x^2+y^2}{2\sigma^2}\right]e^{\left[
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Liczenie-DoG">Liczenie DoG<a class="anchor-link" href="#Liczenie-DoG">&#182;</a></h4><p><img src="images/sift_dog.jpg" alt=""></p>
+<h3 id="Ud&#378;wi&#281;kowienie-filmu">Ud&#378;wi&#281;kowienie filmu<a class="anchor-link" href="#Ud&#378;wi&#281;kowienie-filmu">&#182;</a></h3><ul>
+<li>Poluzowanie naciągu w projektorze (<a href="https://en.wikipedia.org/wiki/Movie_projector#/media/File:Projmech.jpg">fig</a>)</li>
+<li>Zapis dźwięku na taśmie filmowej (<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/35mm_film_audio_macro.jpg/250px-35mm_film_audio_macro.jpg">fig</a>)</li>
+</ul>
 
 </div>
 </div>
@@ -12238,7 +11952,28 @@ LoG(x,y)=-\frac{1}{\pi\sigma^4}\left[1-\frac{x^2+y^2}{2\sigma^2}\right]e^{\left[
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Punkty-kluczowe-na-przyk&#322;adowym-zdj&#281;ciu">Punkty kluczowe na przyk&#322;adowym zdj&#281;ciu<a class="anchor-link" href="#Punkty-kluczowe-na-przyk&#322;adowym-zdj&#281;ciu">&#182;</a></h4><p><img src="images/sift_keypoints.jpg" alt=""></p>
+<h3 id="Pr&#243;bkowanie-filmu">Pr&#243;bkowanie filmu<a class="anchor-link" href="#Pr&#243;bkowanie-filmu">&#182;</a></h3><ul>
+<li>Film analogy zdefiniowany zmiennymi $x$,$y$ oraz $t$</li>
+<li>Na taśmie, $x$ i $y$ są rzeczywiste, ale $t$ jest próbkowane</li>
+<li>Twierdzenie Nyquista w filmie, np. <a href="https://www.youtube.com/watch?v=UkotZy3lQqo">1</a>, <a href="https://www.youtube.com/watch?v=VNftf5qLpiA">2</a></li>
+<li>Transformata Fouriera 3D</li>
+<li>Typowe częstotliwści próbkowania:<ul>
+<li>12, 24/25 - kino </li>
+<li>50/60 - TV, monitor</li>
+</ul>
+</li>
+<li>Składowe:<ul>
+<li>YUV444, YUV422, YUV411, YUV420 <a href="https://en.wikipedia.org/wiki/Chroma_subsampling#Sampling_systems_and_ratios">link</a></li>
+</ul>
+</li>
+<li>Przykładowo YUV444:</li>
+</ul>
+<p>\begin{equation}
+24 \text{ fps} \cdot 3 \text{ skł.} \cdot 1920 \cdot 1080 \cdot 8 \text{ b} = 1194393600 \text{ b/s} \approx 1.94 \text{ Gb/s}
+\end{equation}</p>
+<ul>
+<li>Przeplot (ang. <a href="https://en.wikipedia.org/wiki/Interlaced_video">interlace</a>)</li>
+</ul>
 
 </div>
 </div>
@@ -12247,12 +11982,20 @@ LoG(x,y)=-\frac{1}{\pi\sigma^4}\left[1-\frac{x^2+y^2}{2\sigma^2}\right]e^{\left[
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Inne-metody">Inne metody<a class="anchor-link" href="#Inne-metody">&#182;</a></h3><ul>
-<li>SURF - Speeded-Up Robust Features (2006)</li>
-<li>FAST - Features from Accelerated Segment Test (2006, 2010)</li>
-<li>CenSuRe/STAR - Center Surround Extremas (2008)</li>
-<li>BRIEF - Binary Robust Independent Elementary Features (2010)</li>
-<li>ORB - Oriented FAST and Rotated BRIEF (2011)</li>
+<h3 id="MPEG">MPEG<a class="anchor-link" href="#MPEG">&#182;</a></h3><ul>
+<li>Kompresja pojedynczych klatek: MJPEG</li>
+<li>Zapis różnicowy<ul>
+<li>makrobloki (4 bloki 8x8)</li>
+<li>wektory przesunieć (x,y) i obrót (r)</li>
+</ul>
+</li>
+<li>Rodzaje klatek:<ul>
+<li>I (internal), P (progressive), B (bi-predictive)</li>
+</ul>
+</li>
+<li>Przykład kodowania: IPBBBBBBIPBBBBBBIPBBBBBB</li>
+<li>1080p można przsyłać używając zaledwie 9.5 Mb/s</li>
+<li>Utrata klatki <a href="https://www.researchgate.net/publication/224393200_Not_All_Packets_Are_Equal_Part_2_The_Impact_of_Network_Packet_Loss_on_Video_Quality">link</a></li>
 </ul>
 
 </div>
@@ -12262,7 +12005,85 @@ LoG(x,y)=-\frac{1}{\pi\sigma^4}\left[1-\frac{x^2+y^2}{2\sigma^2}\right]e^{\left[
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="G&#322;&#281;bokie-siecie-neuronowe">G&#322;&#281;bokie siecie neuronowe<a class="anchor-link" href="#G&#322;&#281;bokie-siecie-neuronowe">&#182;</a></h2><p><img src="images/hierarchical_features.png" alt=""></p>
+<h2 id="Podsumowanie-wyk&#322;adu">Podsumowanie wyk&#322;adu<a class="anchor-link" href="#Podsumowanie-wyk&#322;adu">&#182;</a></h2>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sygna&#322;y">Sygna&#322;y<a class="anchor-link" href="#Sygna&#322;y">&#182;</a></h3><ul>
+<li>Definicja</li>
+<li>Rodzaje sygnału (właściwości)</li>
+<li>Wzory sygnału (główne)</li>
+<li>Parametry sygnału:<ul>
+<li>energia, moc, momenty statystyczne, ...</li>
+</ul>
+</li>
+<li>Reprezentacja wykładnicza</li>
+<li>Porównannie i wady/zalety cyfrowy/analogowy</li>
+<li>Modulacja AM/FM/PM</li>
+<li>Pojęcia:<ul>
+<li>próbka, amplituda, faza, częstotliwość, obwiednia</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Systemy-LTI">Systemy LTI<a class="anchor-link" href="#Systemy-LTI">&#182;</a></h3><ul>
+<li>Definicja i zastosowania</li>
+<li>Liniowość</li>
+<li>Niezależność czasowa</li>
+<li>Przyczynowość</li>
+<li>Stabilność</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Splot">Splot<a class="anchor-link" href="#Splot">&#182;</a></h3><ul>
+<li>Opis i zastosowania</li>
+<li>Wzór i metody liczenia</li>
+<li>Rodzaje:<ul>
+<li>ciągły, dyskretny, kołowy</li>
+</ul>
+</li>
+<li>Właściwości</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Transformaty">Transformaty<a class="anchor-link" href="#Transformaty">&#182;</a></h3><ul>
+<li>Rodzaje i zastosowanie transformat Fouriera<ul>
+<li>Szereg Fouriera, Transformata Fouriera, DTFT, SFT</li>
+</ul>
+</li>
+<li>FS trygonometryczny i zespolony</li>
+<li>Transformata analityczna i syntetyczna</li>
+<li>Widmo<ul>
+<li>amplitudowe, moduł, fazowe, argument, mocy</li>
+</ul>
+</li>
+<li>Ograniczenia TF</li>
+<li>Właściwości TF</li>
+<li>Symetria TF</li>
+</ul>
 
 </div>
 </div>
@@ -12271,7 +12092,69 @@ LoG(x,y)=-\frac{1}{\pi\sigma^4}\left[1-\frac{x^2+y^2}{2\sigma^2}\right]e^{\left[
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Autoenkoder">Autoenkoder<a class="anchor-link" href="#Autoenkoder">&#182;</a></h4><p><img src="images/autoencoder.png" alt=""></p>
+<ul>
+<li>Twierdzenie Parsevala/Plancherela/mocy</li>
+<li>Baza DFT</li>
+<li>Zero-padding w DFT</li>
+<li>DC-offset i wpływ na DFT</li>
+<li>Okienkowanie (Hamming, etc.)</li>
+<li>FFT<ul>
+<li>zasada działania</li>
+<li>złożoność obliczeniowa</li>
+<li>DIT/DIF</li>
+<li>filtrowanie za pomocą DFT</li>
+</ul>
+</li>
+<li>analiza czasowo-częstotliwościowa i STFT</li>
+<li>Zasada nieoznaczoności Heisenberga w analizie T-F</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Pr&#243;bkowanie">Pr&#243;bkowanie<a class="anchor-link" href="#Pr&#243;bkowanie">&#182;</a></h3><ul>
+<li>Próbkowanie</li>
+<li>Kwantyzacja<ul>
+<li>Rodzaje kwantyzacji</li>
+</ul>
+</li>
+<li>Interpolacja</li>
+<li>Twierdzenie Nyquista</li>
+<li>Aliasing i folding</li>
+<li>Przykładowe częstotliwości próbkowania i głębie bitowe</li>
+<li>SNR</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Filtrowanie">Filtrowanie<a class="anchor-link" href="#Filtrowanie">&#182;</a></h3><ul>
+<li>Rodzaje filtrów<ul>
+<li>FIR/IIR, HP/LP/BP/BS/AP</li>
+</ul>
+</li>
+<li>Generowanie innych z LP</li>
+<li>Zasady projektowania<ul>
+<li>w tym linowość, przyczynowość i stabilność</li>
+</ul>
+</li>
+<li>Wady/zalety IIR/FIR</li>
+<li>Liniowy FIR</li>
+<li>Transformata Z<ul>
+<li>rozpoznawanie rodzaju (i właściwości) filtru z transformaty Z</li>
+<li>ROC</li>
+</ul>
+</li>
+<li>Transmitancja</li>
+</ul>
 
 </div>
 </div>
@@ -12280,8 +12163,42 @@ LoG(x,y)=-\frac{1}{\pi\sigma^4}\left[1-\frac{x^2+y^2}{2\sigma^2}\right]e^{\left[
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Przyk&#322;ad-dzia&#322;ania-autoenkodera-na-bazie-zdj&#281;&#263;-MNIST">Przyk&#322;ad dzia&#322;ania autoenkodera na bazie zdj&#281;&#263; MNIST<a class="anchor-link" href="#Przyk&#322;ad-dzia&#322;ania-autoenkodera-na-bazie-zdj&#281;&#263;-MNIST">&#182;</a></h4><p><img src="images/ae_minst.jpg" alt=""></p>
-<p><a href="https://www.youtube.com/watch?v=pM68et1o3Zk">Youtube</a></p>
+<ul>
+<li>Przykładowe filtry:<ul>
+<li>mean, gaussian, sin, sinc</li>
+</ul>
+</li>
+<li>Algorytmy do projektowania FIR<ul>
+<li>próbkowanie częstotliwości</li>
+<li>minimalizacja błędu średniokwadratowego</li>
+<li>okienkowa</li>
+</ul>
+</li>
+<li>Algorytmy do IIR (tylko rodzaje, bez opisu)</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Obrazy">Obrazy<a class="anchor-link" href="#Obrazy">&#182;</a></h3><ul>
+<li>Teoria<ul>
+<li>prędkość światła</li>
+<li>zakres długości fal widocznych</li>
+<li>podczerwień i ultra-fiolet</li>
+<li>miary światła</li>
+<li>barwa światła (temperatura czarnego ciała)</li>
+<li>budowa oka (z grubsza)</li>
+<li>rodzaje ekranów</li>
+<li>rodzaje drukarek</li>
+<li>subpixel rendering</li>
+<li>kolor i kanały koloru</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
@@ -12290,11 +12207,91 @@ LoG(x,y)=-\frac{1}{\pi\sigma^4}\left[1-\frac{x^2+y^2}{2\sigma^2}\right]e^{\left[
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Transfer-learning">Transfer learning<a class="anchor-link" href="#Transfer-learning">&#182;</a></h3><p><img src="images/imagenet_vgg16.png" alt=""></p>
+<ul>
+<li>Pojęcia<ul>
+<li>piksel, rozdzielczość, dpi</li>
+</ul>
+</li>
+<li>Histogram</li>
+<li>Momenty obrazów</li>
+<li>Przestrzenie barw</li>
+</ul>
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Przekszta&#322;cenia-punktowe">Przekszta&#322;cenia punktowe<a class="anchor-link" href="#Przekszta&#322;cenia-punktowe">&#182;</a></h3><ul>
+<li>Liniowe</li>
+<li>Nieliniowe<ul>
+<li>gamma, sigmoid</li>
+</ul>
+</li>
+<li>Kwantyzacja jako przekształcenie punktowe</li>
+<li>Propagacja błędu w kwantyzacji</li>
+<li>Progowanie<ul>
+<li>jedna wartość, OTSU, adaptacyjnie</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Transformaty-2D">Transformaty 2D<a class="anchor-link" href="#Transformaty-2D">&#182;</a></h3><ul>
+<li>Fourier 2D</li>
+<li>DCT 2D</li>
+<li>Aliasing w obrazach</li>
+<li>Splot 2D</li>
+<li>Filtry w obrazach<ul>
+<li>mean, gauss, LP, HP</li>
+<li>median</li>
+</ul>
+</li>
+<li>Detekcja krawędzi<ul>
+<li>pochodna</li>
+<li>Sobel</li>
+<li>Laplacian, LoG, DoG</li>
+<li>amplituda/faza krawędzi</li>
+<li>Canny</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Inne">Inne<a class="anchor-link" href="#Inne">&#182;</a></h3><ul>
+<li>JPEG (ogólny zarys algorytmu)</li>
+<li>Przekształcenia morfologiczne<ul>
+<li>dylacja, erozja, zamknięcie, otwarcie</li>
+</ul>
+</li>
+<li>Transformata Hougha</li>
+<li>Cechy obrazu (znajomość ogólnych cech algorytmu)<ul>
+<li>Harris corner, SIFT, SURF, FAST, ORB, STAR, BRIEF</li>
+</ul>
+</li>
+<li>Sieci neuronowe (znajomość pojęć)<ul>
+<li>sieci splotowe, autoenkoder, głębokie uczenie, transfer learning</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section>
 </div>
 </div>
 
