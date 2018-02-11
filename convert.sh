@@ -12,4 +12,5 @@ jupyter nbconvert 9_obrazy_punkt.ipynb --to slides
 jupyter nbconvert 10_obrazy_transformaty.ipynb --to slides
 jupyter nbconvert 11_obrazy_cechy.ipynb --to slides
 jupyter nbconvert 12_ml.ipynb --to slides
-jupyter nbconvert 13_Podsumowanie.ipynb --to slides
+jupyter nbconvert 13_Film.ipynb --to slides
+jupyter nbconvert Podsumowanie.ipynb --to slides

@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>13_Podsumowanie slides</title>
+<title>Podsumowanie slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11905,107 +11905,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Film">Film<a class="anchor-link" href="#Film">&#182;</a></h1>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Wprowadznie">Wprowadznie<a class="anchor-link" href="#Wprowadznie">&#182;</a></h2><ul>
-<li>Bezwładność oka ludzkiego<ul>
-<li><a href="https://en.wikipedia.org/wiki/Zoetrope">Zoetrope</a></li>
-</ul>
-</li>
-<li>Historia<ul>
-<li><a href="https://en.wikipedia.org/wiki/Magic_lantern">"Magiczna latarnia" Huygensa</a> (XVII w.)</li>
-<li>Bracia Lumière (XIX w.) - pierwszy film 1895 r.</li>
-</ul>
-</li>
-<li>Algorytm:<ol>
-<li>Otwórz migawkę na krótki czas $t_0$</li>
-<li>Wyświetl/nagraj zdjęcie</li>
-<li>Zamknij migwakę po upłynięciu czasu $t_0$</li>
-<li>Przesuń taśmę o jedną klatkę</li>
-<li>Powróć do punktu 1.</li>
-</ol>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Ud&#378;wi&#281;kowienie-filmu">Ud&#378;wi&#281;kowienie filmu<a class="anchor-link" href="#Ud&#378;wi&#281;kowienie-filmu">&#182;</a></h3><ul>
-<li>Poluzowanie naciągu w projektorze (<a href="https://en.wikipedia.org/wiki/Movie_projector#/media/File:Projmech.jpg">fig</a>)</li>
-<li>Zapis dźwięku na taśmie filmowej (<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/35mm_film_audio_macro.jpg/250px-35mm_film_audio_macro.jpg">fig</a>)</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Pr&#243;bkowanie-filmu">Pr&#243;bkowanie filmu<a class="anchor-link" href="#Pr&#243;bkowanie-filmu">&#182;</a></h3><ul>
-<li>Film analogy zdefiniowany zmiennymi $x$,$y$ oraz $t$</li>
-<li>Na taśmie, $x$ i $y$ są rzeczywiste, ale $t$ jest próbkowane</li>
-<li>Twierdzenie Nyquista w filmie, np. <a href="https://www.youtube.com/watch?v=UkotZy3lQqo">1</a>, <a href="https://www.youtube.com/watch?v=VNftf5qLpiA">2</a></li>
-<li>Transformata Fouriera 3D</li>
-<li>Typowe częstotliwści próbkowania:<ul>
-<li>12, 24/25 - kino </li>
-<li>50/60 - TV, monitor</li>
-</ul>
-</li>
-<li>Składowe:<ul>
-<li>YUV444, YUV422, YUV411, YUV420 <a href="https://en.wikipedia.org/wiki/Chroma_subsampling#Sampling_systems_and_ratios">link</a></li>
-</ul>
-</li>
-<li>Przykładowo YUV444:</li>
-</ul>
-<p>\begin{equation}
-24 \text{ fps} \cdot 3 \text{ skł.} \cdot 1920 \cdot 1080 \cdot 8 \text{ b} = 1194393600 \text{ b/s} \approx 1.94 \text{ Gb/s}
-\end{equation}</p>
-<ul>
-<li>Przeplot (ang. <a href="https://en.wikipedia.org/wiki/Interlaced_video">interlace</a>)</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="MPEG">MPEG<a class="anchor-link" href="#MPEG">&#182;</a></h3><ul>
-<li>Kompresja pojedynczych klatek: MJPEG</li>
-<li>Zapis różnicowy<ul>
-<li>makrobloki (4 bloki 8x8)</li>
-<li>wektory przesunieć (x,y) i obrót (r)</li>
-</ul>
-</li>
-<li>Rodzaje klatek:<ul>
-<li>I (internal), P (progressive), B (bi-predictive)</li>
-</ul>
-</li>
-<li>Przykład kodowania: IPBBBBBBIPBBBBBBIPBBBBBB</li>
-<li>1080p można przsyłać używając zaledwie 9.5 Mb/s</li>
-<li>Utrata klatki <a href="https://www.researchgate.net/publication/224393200_Not_All_Packets_Are_Equal_Part_2_The_Impact_of_Network_Packet_Loss_on_Video_Quality">link</a></li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Podsumowanie-wyk&#322;adu">Podsumowanie wyk&#322;adu<a class="anchor-link" href="#Podsumowanie-wyk&#322;adu">&#182;</a></h2>
+<h1 id="Podsumowanie-wyk&#322;adu">Podsumowanie wyk&#322;adu<a class="anchor-link" href="#Podsumowanie-wyk&#322;adu">&#182;</a></h1>
 </div>
 </div>
 </div></section></section><section><section>
