@@ -12,11 +12,11 @@
                     <div xmlns="http://www.w3.org/1999/xhtml"
                          style="display: inline-block; font-size: 20px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 68px; white-space: nowrap; overflow-wrap: normal; text-align: center;">
                         <div xmlns="http://www.w3.org/1999/xhtml"
-                             style="display:inline-block;text-align:inherit;text-decoration:inherit;">UKŁAD
+                             style="display:inline-block;text-align:inherit;text-decoration:inherit;">SYSTEM
                         </div>
                     </div>
                 </foreignObject>
-                <text x="34" y="21" fill="#000000" text-anchor="middle" font-size="20px" font-family="Helvetica">UKŁAD
+                <text x="34" y="21" fill="#000000" text-anchor="middle" font-size="20px" font-family="Helvetica">SYSTEM
                 </text>
             </switch>
         </g>
@@ -33,12 +33,12 @@
                     <div xmlns="http://www.w3.org/1999/xhtml"
                          style="display: inline-block; font-size: 20px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 69px; white-space: nowrap; overflow-wrap: normal; text-align: center;">
                         <div xmlns="http://www.w3.org/1999/xhtml"
-                             style="display:inline-block;text-align:inherit;text-decoration:inherit;">Wejście
+                             style="display:inline-block;text-align:inherit;text-decoration:inherit;">Input
                         </div>
                     </div>
                 </foreignObject>
                 <text x="34" y="21" fill="#000000" text-anchor="middle" font-size="20px" font-family="Helvetica">
-                    Wejście
+                    Input
                 </text>
             </switch>
         </g>
@@ -49,12 +49,12 @@
                     <div xmlns="http://www.w3.org/1999/xhtml"
                          style="display: inline-block; font-size: 20px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 69px; white-space: nowrap; overflow-wrap: normal; text-align: center;">
                         <div xmlns="http://www.w3.org/1999/xhtml"
-                             style="display:inline-block;text-align:inherit;text-decoration:inherit;">Wyjście
+                             style="display:inline-block;text-align:inherit;text-decoration:inherit;">Output
                         </div>
                     </div>
                 </foreignObject>
                 <text x="34" y="21" fill="#000000" text-anchor="middle" font-size="20px" font-family="Helvetica">
-                    Wyjście
+                    Output
                 </text>
             </switch>
         </g>
