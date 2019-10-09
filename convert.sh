@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 for f in wykład/*.ipynb ; do
-  if [ $f -nt ${f%ipynb}slides.html ] ; then
+  if [[ ! -e ${f%ipynb}slides.html || $f -nt ${f%ipynb}slides.html ]] ; then
 	  jupyter nbconvert $f --to slides
 	else
 	  echo $f did not change...
