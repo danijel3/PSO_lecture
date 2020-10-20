@@ -13367,6 +13367,13 @@ f(t)=\frac{1}{2}(f(t)+f(-t))+\frac{1}{2}(f(t)-f(-t))
 <li>the repetition count of a phenomenon (eg. period) per unit of time</li>
 <li>Hz -- number of periods per second</li>
 </ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Wave-length">Wave length<a class="anchor-link" href="#Wave-length">&#182;</a></h2><ul>
 <li>length of signal period within a certain medium</li>
 <li>inverse of frequency: $\lambda = \frac{v}{f}$</li>
@@ -13415,9 +13422,9 @@ f(n)=A*\sin(2\pi f_0 n / f_s +\phi)
 <h1 id="Square-pulse">Square pulse<a class="anchor-link" href="#Square-pulse">&#182;</a></h1>\begin{equation}
 x(t)=\Pi(t)=\left\{
 \begin{array}{l l}
- 0 &amp; \text{dla $|t|&gt;\frac{1}{2}$} \\
- \frac{1}{2} &amp; \text{dla $|t|=\frac{1}{2}$} \\
- 1 &amp; \text{dla $|t|&lt;\frac{1}{2}$}
+ 0 &amp; \text{if $|t|&gt;\frac{1}{2}$} \\
+ \frac{1}{2} &amp; \text{if $|t|=\frac{1}{2}$} \\
+ 1 &amp; \text{if $|t|&lt;\frac{1}{2}$}
 \end{array}
 \right.
 \end{equation}<p><img src="images/square_pulse.png" alt=""></p>
@@ -13431,8 +13438,8 @@ x(t)=\Pi(t)=\left\{
 <h1 id="Triangle-pulse">Triangle pulse<a class="anchor-link" href="#Triangle-pulse">&#182;</a></h1>\begin{equation}
 x(t)=\Lambda(t)=\left\{
 \begin{array}{l l}
- 0 &amp; \text{dla $|t|&gt;1$} \\
- 1-|t| &amp; \text{dla $|t|\leq 1$} \\
+ 0 &amp; \text{if $|t|&gt;1$} \\
+ 1-|t| &amp; \text{if $|t|\leq 1$} \\
 \end{array}
 \right.
 \end{equation}<p><img src="images/triangle_pulse.png?1" alt=""></p>
@@ -13457,9 +13464,9 @@ x(t)=cos(\omega_0 t) \cdot \Pi\left(\frac{t}{T/2}\right) \\
 <h1 id="Dirac-delta">Dirac delta<a class="anchor-link" href="#Dirac-delta">&#182;</a></h1>\begin{equation}
 f(t)=\delta(t)=\left\{
 \begin{array}{l l}
-0 &amp; \text{dla $t&lt;0$} \\
-\infty &amp; \text{dla $t=0$} \\
-0 &amp; \text{dla $t&gt;0$}
+0 &amp; \text{if $t&lt;0$} \\
+\infty &amp; \text{if $t=0$} \\
+0 &amp; \text{if $t&gt;0$}
 \end{array}
 \right. 
 \end{equation}<p><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dirac_distribution_PDF.svg" style="width:500px"></p>
@@ -13483,8 +13490,8 @@ f(t)=\delta(t)=\left\{
 <h1 id="Kronecker-delta">Kronecker delta<a class="anchor-link" href="#Kronecker-delta">&#182;</a></h1>\begin{equation}
 f(n)=\left\{
 \begin{array}{l l}
-1 &amp; \text{dla $n=0$} \\
-0 &amp; \text{dla $n\neq0$}
+1 &amp; \text{if $n=0$} \\
+0 &amp; \text{if $n\neq0$}
 \end{array}
 \right. 
 \end{equation}<p><img src="images/kronecker.png" alt=""></p>
@@ -13498,8 +13505,8 @@ f(n)=\left\{
 <h1 id="Exponential-decay">Exponential decay<a class="anchor-link" href="#Exponential-decay">&#182;</a></h1>\begin{equation}
 f(t)=\left\{
 \begin{array}{l l}
-Ae^{-\alpha t} &amp; \text{dla $t\geq 0$} \\
-0 &amp; \text{dla $t&lt;0$}
+Ae^{-\alpha t} &amp; \text{if $t\geq 0$} \\
+0 &amp; \text{if $t&lt;0$}
 \end{array}
 \right. \\
 \alpha &gt;0
@@ -13514,8 +13521,8 @@ Ae^{-\alpha t} &amp; \text{dla $t\geq 0$} \\
 <h1 id="Sine-exponential-decay">Sine exponential decay<a class="anchor-link" href="#Sine-exponential-decay">&#182;</a></h1>\begin{equation}
 f(t)=\left\{
 \begin{array}{l l}
-Ae^{-\alpha t} \sin(\omega_0 t) &amp; \text{dla $t\geq 0$} \\
-0 &amp; \text{dla $t&lt;0$}
+Ae^{-\alpha t} \sin(\omega_0 t) &amp; \text{if $t\geq 0$} \\
+0 &amp; \text{if $t&lt;0$}
 \end{array}
 \right. 
 \end{equation}<p><img src="images/exp_sin.png" alt=""></p>
@@ -13529,8 +13536,8 @@ Ae^{-\alpha t} \sin(\omega_0 t) &amp; \text{dla $t\geq 0$} \\
 <h1 id="Sinc">Sinc<a class="anchor-link" href="#Sinc">&#182;</a></h1>\begin{equation}
 f(t)=\left\{
 \begin{array}{l l}
-\sin(\omega_0 t)/(\omega_0 t) &amp; \text{dla $t\neq 0$} \\
-1 &amp; \text{dla $t=0$}
+\sin(\omega_0 t)/(\omega_0 t) &amp; \text{if $t\neq 0$} \\
+1 &amp; \text{if $t=0$}
 \end{array}
 \right. 
 \end{equation}<p><img src="images/sinc.png?1" alt=""></p>
@@ -13554,8 +13561,8 @@ f(t)=e^{-\pi t^2}
 <h1 id="Step">Step<a class="anchor-link" href="#Step">&#182;</a></h1>\begin{equation}
 f(t)=\left\{
 \begin{array}{l l}
-1 &amp; \text{dla $t\geq 0$} \\
-0 &amp; \text{dla $t&lt;0$}
+1 &amp; \text{if $t\geq 0$} \\
+0 &amp; \text{if $t&lt;0$}
 \end{array}
 \right. 
 \end{equation}<p><img src="images/step.png" alt=""></p>
@@ -13569,8 +13576,8 @@ f(t)=\left\{
 <h1 id="Exponential-increase">Exponential increase<a class="anchor-link" href="#Exponential-increase">&#182;</a></h1>\begin{equation}
 f(t)=\left\{
 \begin{array}{l l}
-(1-e^{-\alpha t}) &amp; \text{dla $t\geq 0$} \\
-0 &amp; \text{dla $t&lt;0$}
+(1-e^{-\alpha t}) &amp; \text{if $t\geq 0$} \\
+0 &amp; \text{if $t&lt;0$}
 \end{array}
 \right. \\
 \alpha&gt;0
@@ -13585,9 +13592,9 @@ f(t)=\left\{
 <h1 id="Sign-(signum)">Sign (signum)<a class="anchor-link" href="#Sign-(signum)">&#182;</a></h1>\begin{equation}
 f(t)=\left\{
 \begin{array}{l l}
-1 &amp; \text{dla $t&gt;0$} \\
-0 &amp; \text{dla $t=0$} \\
--1 &amp; \text{dla $t&lt;0$}
+1 &amp; \text{if $t&gt;0$} \\
+0 &amp; \text{if $t=0$} \\
+-1 &amp; \text{if $t&lt;0$}
 \end{array}
 \right. 
 \end{equation}<p><img src="images/sign.png" alt=""></p>
@@ -13654,7 +13661,14 @@ f(t)=\left\{
 E = \int_{-\infty}^{\infty} f(t) ^2 dt
 \end{equation}<h2 id="Power">Power<a class="anchor-link" href="#Power">&#182;</a></h2>\begin{equation}
 P = \lim_{T\rightarrow\infty}\frac{E}{T}
-\end{equation}<h2 id="Root-Mean-Square">Root Mean Square<a class="anchor-link" href="#Root-Mean-Square">&#182;</a></h2>\begin{equation}
+\end{equation}
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Parameters">Parameters<a class="anchor-link" href="#Parameters">&#182;</a></h1><h2 id="Root-Mean-Square">Root Mean Square<a class="anchor-link" href="#Root-Mean-Square">&#182;</a></h2>\begin{equation}
 RMS(T) = \sqrt{P_T}
 \end{equation}<h2 id="Decibel-(dB)">Decibel (dB)<a class="anchor-link" href="#Decibel-(dB)">&#182;</a></h2><ul>
 <li>Weber-Fechner law</li>
